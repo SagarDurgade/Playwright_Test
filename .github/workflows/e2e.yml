@@ -8,20 +8,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
-          node-version: '22'  # Consider upgrading to Node.js 16 or 18
-      - name: Check npm and Node.js versions
-        run: |
-          node -v
-          npm -v
+          node-version: '22'
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Run your tests
         run: npx playwright test tests
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: Test Results
-          path: playwright-report
