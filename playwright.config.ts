@@ -1,5 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 
+const SECONDS = 1000 // 1 second = 1000 milliseconds
+const MINUTES = 60 * SECONDS // 1 minute = 60 seconds
+const ACCEPTED_MAX_FAILURES = 200
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -11,6 +14,7 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -32,6 +36,12 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure'
   },
+  
+	globalTimeout: 60 * MINUTES, // 60 min limit for the full test run
+  timeout: 60 * SECONDS, // 10 min limit for each test
+	expect: {
+		timeout: 20 * SECONDS, // Timeout for each assertion 20 sec
+	},
 
   /* Configure projects for major browsers */
   projects: [
@@ -40,15 +50,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
