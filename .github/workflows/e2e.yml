@@ -18,7 +18,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run your tests
-        run: npx playwright test tests
+        run: npx playwright test tests --repeat-each=100
 
       - name: Upload Playwright Test Results
         uses: actions/upload-artifact@v3
