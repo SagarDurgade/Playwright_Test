@@ -1,8 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const SECONDS = 1000 // 1 second = 1000 milliseconds
-const MINUTES = 60 * SECONDS // 1 minute = 60 seconds
-const ACCEPTED_MAX_FAILURES = 200
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -14,7 +11,6 @@ const ACCEPTED_MAX_FAILURES = 200
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -22,9 +18,9 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 2 : 1,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 4 : 4,
+  workers: process.env.CI ? 4 : 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -34,14 +30,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    screenshot: 'only-on-failure'
+    screenshot: 'only-on-failure',
   },
-  
-	globalTimeout: 60 * MINUTES, // 60 min limit for the full test run
-  timeout: 60 * SECONDS, // 10 min limit for each test
-	expect: {
-		timeout: 20 * SECONDS, // Timeout for each assertion 20 sec
-	},
 
   /* Configure projects for major browsers */
   projects: [

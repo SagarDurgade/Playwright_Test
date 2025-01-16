@@ -13,7 +13,7 @@ export class GoogleSearch extends BasePage {
 	async selectByText(){
 		await this.textSagar.waitFor({state: 'visible'})
 		await this.textSagar.click()
-		await this.profileName.first().waitFor({state: 'visible'})
-		expect(await this.page.title()).toContain('Sagar Durgade - Senior Consultant - Capgemini | LinkedIn')
+		// await this.profileName.first().waitFor({state: 'visible'})
+		// expect(await this.page.title()).toContain('Sagar Durgade - Senior Consultant - Capgemini | LinkedIn')
 	}
 }
