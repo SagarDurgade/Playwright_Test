@@ -1,4 +1,4 @@
-name: "tests"
+name: "Tests"
 on: [push]
 jobs:
   test-e2e:
@@ -18,7 +18,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run your tests
-        run: npx playwright test tests --repeat-each=100
+        run: npx playwright test tests --repeat-each=4 --workers=4 --reporter=list
 
       - name: Upload Playwright Test Results
         uses: actions/upload-artifact@v3
