@@ -12,6 +12,6 @@ test.describe('Administrators', () => {
 });
 
 const testData = {
-    googleUrl: 'https://www.google.co.in/',
+    googleUrl: 'https://duckduckgo.com/',
     searchData: 'Playwright test engineer Sagar Durgade Capgemini',
 }
