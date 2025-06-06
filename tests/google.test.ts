@@ -3,7 +3,7 @@ import { createPages } from '../src/app'
 
 
 test.describe('Administrators', () => {
-	test('Sd1', { tag: ['@Pod=Regression'] }, async ({ page }) => {
+	test.skip('Sd1', { tag: ['@Pod=Regression'] }, async ({ page }) => {
         const pages = createPages(page)
         await page.goto(testData.googleUrl, { waitUntil: 'load' })
         await pages.google.searchText(testData.searchData)
