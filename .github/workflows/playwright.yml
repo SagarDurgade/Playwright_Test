@@ -1,25 +1,35 @@
+# Workflow Name
 name: Playwright Tests
+
+# Trigger Conditions
 on:
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  schedule:
+    - cron: '30 2 * * *'  # Daily at 8:00 AM IST
+
+# Jobs Definition
 jobs:
+  # Job Configuration
   test:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
+    timeout-minutes: 60 # Maximum time for the job to run 
+    runs-on: ubuntu-latest # Use the latest version of Ubuntu Linux to execute the job.
+
+    # Steps in the Job
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - uses: actions/checkout@v4 # This step checks out the source code from the repo so it can be used by the workflow.
+    - uses: actions/setup-node@v4 # Sets up the latest LTS version of Node.js.
       with:
         node-version: lts/*
-    - name: Install dependencies
+    - name: Install dependencies # Installs your project's Node.js dependencies using a clean install (npm ci is faster and more reliable than npm install for CI/CD).
       run: npm ci
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run: npx playwright install --with-deps # Downloads the required browsers and dependencies for Playwright.
     - name: Run Playwright tests
       run: npx playwright test
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v4 # pload Playwright Report
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
