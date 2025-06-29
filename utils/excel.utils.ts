@@ -4,19 +4,19 @@ import fs from 'fs'
 export class readAndwrightExcel {
 
     // async readExcel(filePath: string): Promise<ExcelData> {
-    //     const workbook = new ExcelJS.Workbook();
-    //     await workbook.xlsx.readFile(filePath);
-    //     const worksheet = workbook.getWorksheet(1);
-    //     const data: ExcelData = [];
+    //     const workbook = new ExcelJS.Workbook()
+    //     await workbook.xlsx.readFile(filePath)
+    //     const worksheet = workbook.getWorksheet(1)
+    //     const data: ExcelData = []
     //     worksheet.eachRow((row, rowNumber) => {
-    //         if (rowNumber === 1) return;
-    //         const rowData: ExcelRow = [];
+    //         if (rowNumber === 1) return
+    //         const rowData: ExcelRow = []
     //         row.eachCell((cell) => {
-    //             rowData.push(cell.value);
-    //         });
-    //         data.push(rowData);
-    //     });
-    //     return data;
+    //             rowData.push(cell.value)
+    //         })
+    //         data.push(rowData)
+    //     })
+    //     return data
     // }
 
     async writeExcel(filePath: string, sheetName: string,) {
@@ -25,27 +25,27 @@ export class readAndwrightExcel {
                 throw new Error(`File not found: ${filePath}`)
             }
         
-        const workbook = new ExcelJS.Workbook();
-        const worksheet = workbook.addWorksheet('Sheet1');
+        const workbook = new ExcelJS.Workbook()
+        const worksheet = workbook.addWorksheet('Sheet1')
         data.forEach((row) => {
-            worksheet.addRow(row);
-        });
-        await workbook.xlsx.writeFile(filePath);
+            worksheet.addRow(row)
+        })
+        await workbook.xlsx.writeFile(filePath)
     }
 
     async verifyExcelData(filePath: string, data: ExcelData) {
-        const workbook = new ExcelJS.Workbook();
-        await workbook.xlsx.readFile(filePath);
-        const worksheet = workbook.getWorksheet(1);
-        const actualData: ExcelData = [];
+        const workbook = new ExcelJS.Workbook()
+        await workbook.xlsx.readFile(filePath)
+        const worksheet = workbook.getWorksheet(1)
+        const actualData: ExcelData = []
         worksheet.eachRow((row, rowNumber) => {
-            if (rowNumber === 1) return;
-            const rowData: ExcelRow = [];
+            if (rowNumber === 1) return
+            const rowData: ExcelRow = []
             row.eachCell((cell) => {
-                rowData.push(cell.value);
-            });
-            actualData.push(rowData);
-        });
-        expect(actualData).toEqual(data);
+                rowData.push(cell.value)
+            })
+            actualData.push(rowData)
+        })
+        expect(actualData).toEqual(data)
     }
 }

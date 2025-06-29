@@ -6,7 +6,7 @@ export class GetDateTime {
         return `${hours}:${minutes}`
     }
     getCurrentTimeAndSeconds(): string {
-        const now = new Date();
-        return now.toLocaleTimeString() + ' ' + now.getSeconds();
+        const now = new Date()
+        return now.toLocaleTimeString() + ' ' + now.getSeconds()
     }
 }

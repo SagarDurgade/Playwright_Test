@@ -1,0 +1,35 @@
+{
+  "cookies": [
+    {
+      "name": "AEC",
+      "value": "AVh_V2jMaTP2kd2XJO8ekWIZAUD3rnXh9MlN6WpkcnvdXl6apzC1gzAw1A",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1766677178.030165,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "525=YBQIH6HA-jAyMe6eU5MzKE-vu3CUCJheb-3yLfSE0QYI77I8oCtA81cBbM8Y2VLc7NUwOpLvjTDv8cR3xiz6pkYXb7KEHPEiF0UlN0FEueWFn1zqAOxiHDAIfEmXLA_ZQXzs6DjIwyCjDaJUbBS0OD_XdX3f3JLqqnualhe83F1CJIouBOrych86tlUD_flXooZ8S__zAZiDIPH2iA",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1766936378.122789,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "sb_wiz.zpc.gws-wiz.",
+          "value": "{\"0\":[[\"mahnoor fatima imran\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"rb salzburg vs real madrid\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"nyt mini crossword answers\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"panchayat season 4 web series\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"ecs t10 finland 2025 women\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"west bengal dearness allowance\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"dfccil exam date\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"eleven full movie download\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"kannappa prabhas entry\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"jnu pg admission 2025 merit list\",0,[3,362,143],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Trending searches\"]}},\"av\":\"6994311011901059304\",\"q\":\"rMbzuDbcBaIqdcInDCQYvVFmInQ\"}}"
+        }
+      ]
+    }
+  ]
+}
