@@ -2,20 +2,25 @@
   "name": "playwright",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+  "test:cucumber": "cucumber-js --require-module ts-node/register --require tests/api/step_definitions/**/*.ts tests/api/features/**/*.feature"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
     "@playwright/test": "^1.54.1",
     "@types/node": "^22.10.2",
     "allure-commandline": "^2.34.1",
-    "allure-playwright": "^3.3.0"
+    "allure-playwright": "^3.3.0",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
     "@types/xlsx": "^0.0.35",
     "exceljs": "^4.4.0",
+    "typescript": "^5.8.3",
     "xlsx": "^0.18.5"
   }
 }
