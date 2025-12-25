@@ -1,6 +1,5 @@
-import { chromium, test } from '@playwright/test'
-import { createPages } from '../pages/app'
-import { verify } from 'crypto'
+import { test } from '@playwright/test'
+import { createPages } from '../../pages/app'
 
 test('Google Search Test', async ({ page }) => {
     const pages = createPages(page)
