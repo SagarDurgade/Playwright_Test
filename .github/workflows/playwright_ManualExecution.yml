@@ -4,11 +4,20 @@ name: Playwright Tests Manual Execution
 # Trigger Conditions
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment (preprod default; select prod to override)'
+        required: true
+        default: 'preprod'
+        options:
+          - preprod
+          - prod
 
 # Jobs Definition
 jobs:
   # Job Configuration
   test:
+    environment: ${{ github.event.inputs.environment }}
     timeout-minutes: 60 # Maximum time for the job to run 
     runs-on: ubuntu-latest # Use the latest version of Ubuntu Linux to execute the job.
 
