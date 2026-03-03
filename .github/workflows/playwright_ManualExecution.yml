@@ -1,5 +1,5 @@
 # Workflow Name
-name: Playwright Tests
+name: Playwright Tests Manual Execution
 
 # Trigger Conditions
 on:
