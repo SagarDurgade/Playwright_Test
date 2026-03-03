@@ -12,7 +12,18 @@ test('Google Search Test', async ({ page }) => {
     console.log(`Base URL: ${page.url()}`)
 })
 
+test('Open base url and take screenshot', async ({ page }) => {
+    const pages = createPages(page)
+    await page.goto("/")
+    await page.waitForTimeout(5000) // Wait for 5 seconds to observe the result
 
+    // print url
+    console.log(`Current URL: ${page.url()}`)
+
+    // screenshot of the page
+    await page.screenshot({ path: 'screenshot.png' })
+    
+})
 
 const testData = {
     duckduckgoUrl: 'https://duckduckgo.com/',
