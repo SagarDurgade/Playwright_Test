@@ -8,6 +8,8 @@ test('Google Search Test', async ({ page }) => {
     // await pages.duckduckgo.verifySearchResult(testData.verifyText)
     // await pages.duckduckgo.selectSearchResult(testData.verifyText)
     await page.waitForTimeout(5000) // Wait for 5 seconds to observe the result
+    // print base url to console
+    console.log(`Base URL: ${page.url()}`)
 })
 
 

@@ -8,10 +8,10 @@ on:
       environment:
         description: 'Target environment (preprod default; select prod to override)'
         required: true
-        default: 'preprod'
+        default: 'dev'
         options:
-          - preprod
-          - prod
+          - dev
+          - test
 
 # Jobs Definition
 jobs:
