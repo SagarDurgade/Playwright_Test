@@ -14,11 +14,11 @@ test('Google Search Test', async ({ page }) => {
 
 test('Open base url and take screenshot', async ({ page }) => {
     const pages = createPages(page)
+    console.log(`Current URL: ${page.url()}`)
     await page.goto("/")
     await page.waitForTimeout(5000) // Wait for 5 seconds to observe the result
 
     // print url
-    console.log(`Current URL: ${page.url()}`)
 
     // screenshot of the page
     await page.screenshot({ path: 'screenshot.png' })
