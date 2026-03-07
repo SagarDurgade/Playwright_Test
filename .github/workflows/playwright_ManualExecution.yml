@@ -12,6 +12,9 @@ on:
         options:
           - dev
           - test
+      tags:
+        description: 'Tags to filter tests (optional, e.g., @smoke)'
+        required: false
 
 # Jobs Definition
 jobs:
@@ -32,7 +35,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps # Downloads the required browsers and dependencies for Playwright.
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test ${{ github.event.inputs.tags && format('--grep {0}', github.event.inputs.tags) || '' }}
     - uses: actions/upload-artifact@v4 # pload Playwright Report
       if: ${{ !cancelled() }}
       with:
