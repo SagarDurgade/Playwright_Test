@@ -36,6 +36,8 @@ test('Verify page title', { tag: '@tag3' }, async ({ page }) => {
     if (title === 'Playwright Dev') {
         console.log('Page title is correct.')
     }
+    // print base url to console
+    console.log(`Base URL: ${page.url()}`)
 })
 
 const testData = {
