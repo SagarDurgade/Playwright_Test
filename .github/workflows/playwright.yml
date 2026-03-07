@@ -5,6 +5,12 @@ name: Playwright Tests
 on:
   schedule:
     - cron: '30 2 * * *'  # Daily at 8:00 AM IST
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to run tests for'
+        required: false
+        default: ''
 
 # Jobs Definition
 jobs:
@@ -24,7 +30,12 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps # Downloads the required browsers and dependencies for Playwright.
     - name: Run Playwright tests
-      run: npx playwright test
+      run: |
+        if [ -n "${{ inputs.tag }}" ]; then
+          npx playwright test --tag ${{ inputs.tag }}
+        else
+          npx playwright test
+        fi
     - uses: actions/upload-artifact@v4 # pload Playwright Report
       if: ${{ !cancelled() }}
       with:

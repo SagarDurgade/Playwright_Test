@@ -1,7 +1,8 @@
 import { test } from '@playwright/test'
 import { createPages } from '../../pages/app'
 
-test('Google Search Test', async ({ page }) => {
+
+test('Google Search Test', { tag: '@tag1' }, async ({ page }) => {
     const pages = createPages(page)
     await page.goto(testData.duckduckgoUrl)
     await pages.duckduckgo.searchText(testData.searchData)
@@ -12,7 +13,7 @@ test('Google Search Test', async ({ page }) => {
     console.log(`Base URL: ${page.url()}`)
 })
 
-test('Open base url and take screenshot', async ({ page }) => {
+test('Open base url and take screenshot', { tag: '@tag2' }, async ({ page }) => {
     const pages = createPages(page)
     console.log(`Current URL: ${page.url()}`)
     await page.goto("/")
