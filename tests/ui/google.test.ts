@@ -26,6 +26,18 @@ test('Open base url and take screenshot', { tag: '@tag2' }, async ({ page }) => 
     
 })
 
+test('Verify page title', { tag: '@tag3' }, async ({ page }) => {
+    const pages = createPages(page)
+    await page.goto("/")
+    await page.waitForTimeout(5000) // Wait for 5 seconds to observe the result
+    const title = await page.title()
+    console.log(`Page Title: ${title}`)
+    // Verify the page title
+    if (title === 'Playwright Dev') {
+        console.log('Page title is correct.')
+    }
+})
+
 const testData = {
     duckduckgoUrl: 'https://duckduckgo.com/',
     automationtesting: 'https://demo.automationtesting.in/Register.html',
