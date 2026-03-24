@@ -21,8 +21,8 @@ jobs:
 
     # Steps in the Job
     steps:
-    - uses: actions/checkout@v4 # This step checks out the source code from the repo so it can be used by the workflow.
-    - uses: actions/setup-node@v4 # Sets up the latest LTS version of Node.js.
+    - uses: actions/checkout@v6 # This step checks out the source code from the repo so it can be used by the workflow.
+    - uses: actions/setup-node@v6 # Sets up the latest LTS version of Node.js.
       with:
         node-version: lts/*
     - name: Install dependencies # Installs your project's Node.js dependencies using a clean install (npm ci is faster and more reliable than npm install for CI/CD).
