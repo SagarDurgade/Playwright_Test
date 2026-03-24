@@ -36,7 +36,7 @@ jobs:
         else
           npx playwright test
         fi
-    - uses: actions/upload-artifact@v4 # pload Playwright Report
+    - uses: actions/upload-artifact@v6 # pload Playwright Report
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
