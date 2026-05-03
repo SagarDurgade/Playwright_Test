@@ -32,11 +32,15 @@ jobs:
         node-version: lts/*
     - name: Install dependencies # Installs your project's Node.js dependencies using a clean install (npm ci is faster and more reliable than npm install for CI/CD).
       run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
     - name: Run Playwright tests
-      env:
-        ENVIRONMENT: ${{ github.event.inputs.environment }}
-        SKIP_BROWSER_DOWNLOAD: 1
-      run: npx playwright test ${{ github.event.inputs.tags && format('--grep {0}', github.event.inputs.tags) || '' }}
+      # env:
+        # ENVIRONMENT: ${{ github.event.inputs.environment }}
+        # SKIP_BROWSER_DOWNLOAD: 1
+      # run: npx playwright test ${{ github.event.inputs.tags && format('--grep {0}', github.event.inputs.tags) || '' }}
+      run: npx playwright test
+
     - uses: actions/upload-artifact@v6 # pload Playwright Report
       if: ${{ !cancelled() }}
       with:
