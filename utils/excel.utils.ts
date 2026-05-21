@@ -1,32 +1,37 @@
 import ExcelJS from 'exceljs'
-import fs from 'fs'
+import * as fs from 'fs'
+import { expect } from '@playwright/test'
+
+type ExcelRow = ExcelJS.CellValue[]
+type ExcelData = ExcelRow[]
 
 export class readAndwrightExcel {
 
-    // async readExcel(filePath: string): Promise<ExcelData> {
-    //     const workbook = new ExcelJS.Workbook()
-    //     await workbook.xlsx.readFile(filePath)
-    //     const worksheet = workbook.getWorksheet(1)
-    //     const data: ExcelData = []
-    //     worksheet.eachRow((row, rowNumber) => {
-    //         if (rowNumber === 1) return
-    //         const rowData: ExcelRow = []
-    //         row.eachCell((cell) => {
-    //             rowData.push(cell.value)
-    //         })
-    //         data.push(rowData)
-    //     })
-    //     return data
-    // }
+    async readExcel(filePath: string): Promise<ExcelData> {
+        const workbook = new ExcelJS.Workbook()
+        await workbook.xlsx.readFile(filePath)
+        const worksheet = workbook.getWorksheet(1)
+        if (!worksheet) throw new Error(`Worksheet not found in: ${filePath}`)
+        const data: ExcelData = []
+        worksheet.eachRow((row, rowNumber) => {
+            if (rowNumber === 1) return
+            const rowData: ExcelRow = []
+            row.eachCell((cell) => {
+                rowData.push(cell.value)
+            })
+            data.push(rowData)
+        })
+        return data
+    }
 
-    async writeExcel(filePath: string, sheetName: string,) {
+    async writeExcel(filePath: string, sheetName: string, data: ExcelData) {
 
         if (!fs.existsSync(filePath)) {
                 throw new Error(`File not found: ${filePath}`)
             }
         
         const workbook = new ExcelJS.Workbook()
-        const worksheet = workbook.addWorksheet('Sheet1')
+        const worksheet = workbook.addWorksheet(sheetName)
         data.forEach((row) => {
             worksheet.addRow(row)
         })
@@ -37,6 +42,7 @@ export class readAndwrightExcel {
         const workbook = new ExcelJS.Workbook()
         await workbook.xlsx.readFile(filePath)
         const worksheet = workbook.getWorksheet(1)
+        if (!worksheet) throw new Error(`Worksheet not found in: ${filePath}`)
         const actualData: ExcelData = []
         worksheet.eachRow((row, rowNumber) => {
             if (rowNumber === 1) return
