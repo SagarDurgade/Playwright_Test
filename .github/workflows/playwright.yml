@@ -87,12 +87,9 @@ jobs:
           retention-days: 30
 
   publish-report:
-    name: Publish Playwright Report to GitHub Pages
+    name: Upload Playwright Report
     needs: execute-tests
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       # Download artifact generated from previous job
       - name: Download Playwright Report
@@ -101,13 +98,11 @@ jobs:
           name: playwright-report
           path: playwright-report/
 
-      # Upload as GitHub Pages artifact
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+      # Re-upload artifact (optional separate job)
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
+          name: playwright-report-final
           path: playwright-report/
-
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
+          retention-days: 30
