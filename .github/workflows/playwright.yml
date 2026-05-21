@@ -16,17 +16,15 @@ on:
 # Required permissions
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
   execute-tests:
     name: Execute Playwright Tests
-    timeout-minutes: 60
+    timeout-minutes: 45
 
     runs-on: ubuntu-latest
 
-    # Playwright official image already contains browsers
+    # Playwright official Docker image
     container:
       image: mcr.microsoft.com/playwright:v1.60.0-jammy
 
@@ -34,6 +32,8 @@ jobs:
       # Checkout Repository
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       # Setup Node.js
       - name: Setup Node.js
@@ -44,7 +44,7 @@ jobs:
 
       # Install Dependencies
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
       # Run Playwright Tests
       - name: Run Playwright Tests
@@ -57,14 +57,10 @@ jobs:
             npx playwright test 2>&1 | tee logs/test-run.log
           fi
 
-      # Upload Logs
-      - name: Upload Test Logs
+      # Zip Playwright Report
+      - name: Zip Playwright Report
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-logs
-          path: logs/
-          retention-days: 30
+        run: zip -r playwright-report.zip playwright-report
 
       # Upload Playwright Report
       - name: Upload Playwright Report
@@ -72,8 +68,17 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: playwright-report/
+          path: playwright-report.zip
           retention-days: 30
+
+      # Upload Test Logs
+      - name: Upload Test Logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-logs
+          path: logs/
+          retention-days: 15
 
       # Upload Test Results
       - name: Upload Test Results
@@ -82,25 +87,24 @@ jobs:
         with:
           name: test-results
           path: test-results/
-          retention-days: 30
+          retention-days: 15
 
   publish-report:
-    name: Upload Playwright Report
+    name: Download Report Validation
     needs: execute-tests
+
     runs-on: ubuntu-latest
+
     steps:
-      # Download artifact generated from previous job
+      # Download Report Artifact
       - name: Download Playwright Report
         uses: actions/download-artifact@v4
         with:
           name: playwright-report
-          path: playwright-report/
+          path: reports/
 
-      # Re-upload artifact (optional separate job)
-      - name: Upload Playwright Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-final
-          path: playwright-report/
-          retention-days: 30
+      # Verify Downloaded Files
+      - name: Verify Report
+        run: |
+          echo "Downloaded Artifacts:"
+          ls -R reports/
