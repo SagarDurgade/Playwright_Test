@@ -66,14 +66,14 @@ jobs:
           path: logs/
           retention-days: 30
 
-      # # Upload Playwright Report
-      # - name: Upload Playwright Report
-      #   if: always()
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: playwright-report
-      #     path: playwright-report/
-      #     retention-days: 30
+      # Upload Playwright Report
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
 
       # Upload Test Results
       - name: Upload Test Results
@@ -85,24 +85,22 @@ jobs:
           retention-days: 30
 
   publish-report:
-  name: Upload Playwright Report
-  needs: execute-tests
+    name: Upload Playwright Report
+    needs: execute-tests
+    runs-on: ubuntu-latest
+    steps:
+      # Download artifact generated from previous job
+      - name: Download Playwright Report
+        uses: actions/download-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
 
-  runs-on: ubuntu-latest
-
-  steps:
-    # Download artifact generated from previous job
-    - name: Download Playwright Report
-      uses: actions/download-artifact@v4
-      with:
-        name: playwright-report
-        path: playwright-report/
-
-    # Re-upload artifact (optional separate job)
-    - name: Upload Playwright Report
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: playwright-report-final
-        path: playwright-report/
-        retention-days: 30
+      # Re-upload artifact (optional separate job)
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-final
+          path: playwright-report/
+          retention-days: 30
