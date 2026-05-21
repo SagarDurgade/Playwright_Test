@@ -1,49 +1,49 @@
-# Workflow Name
-name: Playwright Tests Manual Execution
+# # Workflow Name
+# name: Playwright Tests Manual Execution
 
-# Trigger Conditions
-on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Target environment (preprod default; select prod to override)'
-        required: true
-        default: 'dev'
-        options:
-          - dev
-          - test
-      tags:
-        description: 'Tags to filter tests (optional, e.g., @smoke)'
-        required: false
+# # Trigger Conditions
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       environment:
+#         description: 'Target environment (preprod default; select prod to override)'
+#         required: true
+#         default: 'dev'
+#         options:
+#           - dev
+#           - test
+#       tags:
+#         description: 'Tags to filter tests (optional, e.g., @smoke)'
+#         required: false
 
-# Jobs Definition
-jobs:
-  # Job Configuration
-  test:
-    environment: ${{ github.event.inputs.environment }}
-    timeout-minutes: 60 # Maximum time for the job to run 
-    runs-on: ubuntu-latest # Use the latest version of Ubuntu Linux to execute the job.
+# # Jobs Definition
+# jobs:
+#   # Job Configuration
+#   test:
+#     environment: ${{ github.event.inputs.environment }}
+#     timeout-minutes: 60 # Maximum time for the job to run 
+#     runs-on: ubuntu-latest # Use the latest version of Ubuntu Linux to execute the job.
 
-    # Steps in the Job
-    steps:
-    - uses: actions/checkout@v6 # This step checks out the source code from the repo so it can be used by the workflow.
-    - uses: actions/setup-node@v6 # Sets up the latest LTS version of Node.js.
-      with:
-        node-version: lts/*
-    - name: Install dependencies # Installs your project's Node.js dependencies using a clean install (npm ci is faster and more reliable than npm install for CI/CD).
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      # env:
-        # ENVIRONMENT: ${{ github.event.inputs.environment }}
-        # SKIP_BROWSER_DOWNLOAD: 1
-      # run: npx playwright test ${{ github.event.inputs.tags && format('--grep {0}', github.event.inputs.tags) || '' }}
-      run: npx playwright test
+#     # Steps in the Job
+#     steps:
+#     - uses: actions/checkout@v6 # This step checks out the source code from the repo so it can be used by the workflow.
+#     - uses: actions/setup-node@v6 # Sets up the latest LTS version of Node.js.
+#       with:
+#         node-version: lts/*
+#     - name: Install dependencies # Installs your project's Node.js dependencies using a clean install (npm ci is faster and more reliable than npm install for CI/CD).
+#       run: npm ci
+#     - name: Install Playwright Browsers
+#       run: npx playwright install --with-deps
+#     - name: Run Playwright tests
+#       # env:
+#         # ENVIRONMENT: ${{ github.event.inputs.environment }}
+#         # SKIP_BROWSER_DOWNLOAD: 1
+#       # run: npx playwright test ${{ github.event.inputs.tags && format('--grep {0}', github.event.inputs.tags) || '' }}
+#       run: npx playwright test
 
-    - uses: actions/upload-artifact@v6 # pload Playwright Report
-      if: ${{ !cancelled() }}
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+#     - uses: actions/upload-artifact@v6 # pload Playwright Report
+#       if: ${{ !cancelled() }}
+#       with:
+#         name: playwright-report
+#         path: playwright-report/
+#         retention-days: 30
