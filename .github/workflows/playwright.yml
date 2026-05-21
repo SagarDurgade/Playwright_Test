@@ -4,7 +4,8 @@ name: Playwright Tests
 # Trigger Conditions
 on:
   schedule:
-    - cron: '30 2 * * *'  # Daily at 8:00 AM IST
+    - cron: '30 2 * * *' # Daily at 8:00 AM IST
+
   workflow_dispatch:
     inputs:
       tag:
@@ -12,85 +13,102 @@ on:
         required: false
         default: ''
 
-# Jobs Definition
-jobs:
-  # Job Configuration
-  Execute-test:
-    timeout-minutes: 60 # Maximum time for the job to run 
-    runs-on: ubuntu-latest # Use the latest version of Ubuntu Linux to execute the job.
+# Required permissions
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-    # Steps in the Job
+jobs:
+  execute-tests:
+    name: Execute Playwright Tests
+    timeout-minutes: 60
+
+    runs-on: ubuntu-latest
+
+    # Playwright official image already contains browsers
+    container:
+      image: mcr.microsoft.com/playwright:v1.54.1-jammy
+
     steps:
-      - uses: actions/checkout@v6 # This step checks out the source code from the repo so it can be used by the workflow.
-      - uses: actions/setup-node@v6 # Sets up the latest LTS version of Node.js.
+      # Checkout Repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
-      - name: Install dependencies # Installs your project's Node.js dependencies using a clean install (npm ci is faster and more reliable than npm install for CI/CD).
+          cache: npm
+
+      # Install Dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Cache Playwright Browsers
-        id: cache-browsers
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Install Playwright Browsers
-        if: steps.cache-browsers.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps # Downloads the required browsers and dependencies for Playwright.
-      - name: Run Playwright tests
+      # Run Playwright Tests
+      - name: Run Playwright Tests
         run: |
           mkdir -p logs
-          if [ -n "${{ inputs.tag }}" ]; then
-            npx playwright test --tag ${{ inputs.tag }} 2>&1 | tee logs/test-run.log
+
+          if [ -n "${{ github.event.inputs.tag }}" ]; then
+            npx playwright test --grep "${{ github.event.inputs.tag }}" 2>&1 | tee logs/test-run.log
           else
             npx playwright test 2>&1 | tee logs/test-run.log
           fi
 
-      - name: Upload test logs
-        if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v6
+      # Upload Logs
+      - name: Upload Test Logs
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: test-logs
           path: logs/
           retention-days: 30
 
-      # - name: Publish test results
-      #   if: ${{ !cancelled() }}
-      #   uses: dorny/test-reporter@v1
-      #   with:
-      #     name: Playwright Test Results
-      #     path: test-results/junit-results.xml
-      #     reporter: java-junit
-      #     fail-on-error: false
-
-      - uses: actions/upload-artifact@v6 # Upload Playwright Report
-        if: ${{ !cancelled() }}
+      # Upload Playwright Report
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-  Publish-report:
-    needs: Execute-test
+
+      # Upload Test Results
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results/
+          retention-days: 30
+
+  publish-report:
+    name: Publish Playwright Report
+    needs: execute-tests
+
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
+      # Download Report Artifact
       - name: Download Playwright Report
         uses: actions/download-artifact@v4
         with:
           name: playwright-report
           path: playwright-report/
 
-      - name: Upload Pages artifact
+      # Upload GitHub Pages Artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: playwright-report/
 
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        id: deploy
+        id: deployment
         uses: actions/deploy-pages@v4
