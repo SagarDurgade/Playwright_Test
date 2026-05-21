@@ -1,6 +1,9 @@
 # Workflow Name
 name: Playwright Tests
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # Trigger Conditions
 on:
   schedule:
@@ -40,7 +43,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: npm
 
       # Install Dependencies
       - name: Install Dependencies
@@ -85,9 +87,12 @@ jobs:
           retention-days: 30
 
   publish-report:
-    name: Upload Playwright Report
+    name: Publish Playwright Report to GitHub Pages
     needs: execute-tests
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       # Download artifact generated from previous job
       - name: Download Playwright Report
@@ -96,11 +101,13 @@ jobs:
           name: playwright-report
           path: playwright-report/
 
-      # Re-upload artifact (optional separate job)
-      - name: Upload Playwright Report
-        if: always()
-        uses: actions/upload-artifact@v4
+      # Upload as GitHub Pages artifact
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: playwright-report-final
           path: playwright-report/
-          retention-days: 30
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
