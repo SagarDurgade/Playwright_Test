@@ -39,11 +39,30 @@ jobs:
         run: npx playwright install --with-deps # Downloads the required browsers and dependencies for Playwright.
       - name: Run Playwright tests
         run: |
+          mkdir -p logs
           if [ -n "${{ inputs.tag }}" ]; then
-            npx playwright test --tag ${{ inputs.tag }}
+            npx playwright test --tag ${{ inputs.tag }} 2>&1 | tee logs/test-run.log
           else
-            npx playwright test
+            npx playwright test 2>&1 | tee logs/test-run.log
           fi
+
+      - name: Upload test logs
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v6
+        with:
+          name: test-logs
+          path: logs/
+          retention-days: 30
+
+      - name: Publish test results
+        if: ${{ !cancelled() }}
+        uses: dorny/test-reporter@v1
+        with:
+          name: Playwright Test Results
+          path: test-results/junit-results.xml
+          reporter: java-junit
+          fail-on-error: false
+
       - uses: actions/upload-artifact@v6 # Upload Playwright Report
         if: ${{ !cancelled() }}
         with:
