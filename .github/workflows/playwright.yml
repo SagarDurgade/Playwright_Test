@@ -15,7 +15,7 @@ on:
 # Jobs Definition
 jobs:
   # Job Configuration
-  Execute test:
+  Execute-test:
     timeout-minutes: 60 # Maximum time for the job to run 
     runs-on: ubuntu-latest # Use the latest version of Ubuntu Linux to execute the job.
 
@@ -71,7 +71,7 @@ jobs:
           path: playwright-report/
           retention-days: 30
   Publish-report:
-    needs: Execute test
+    needs: Execute-test
     runs-on: ubuntu-latest
     permissions:
       pages: write
