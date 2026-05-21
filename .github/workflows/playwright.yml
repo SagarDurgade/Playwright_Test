@@ -28,7 +28,7 @@ jobs:
 
     # Playwright official image already contains browsers
     container:
-      image: mcr.microsoft.com/playwright:v1.54.1-jammy
+      image: mcr.microsoft.com/playwright:v1.60.0-jammy
 
     steps:
       # Checkout Repository
@@ -66,14 +66,14 @@ jobs:
           path: logs/
           retention-days: 30
 
-      # Upload Playwright Report
-      - name: Upload Playwright Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
+      # # Upload Playwright Report
+      # - name: Upload Playwright Report
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: playwright-report
+      #     path: playwright-report/
+      #     retention-days: 30
 
       # Upload Test Results
       - name: Upload Test Results
@@ -85,30 +85,24 @@ jobs:
           retention-days: 30
 
   publish-report:
-    name: Publish Playwright Report
-    needs: execute-tests
+  name: Upload Playwright Report
+  needs: execute-tests
 
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  steps:
+    # Download artifact generated from previous job
+    - name: Download Playwright Report
+      uses: actions/download-artifact@v4
+      with:
+        name: playwright-report
+        path: playwright-report/
 
-    steps:
-      # Download Report Artifact
-      - name: Download Playwright Report
-        uses: actions/download-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report/
-
-      # Upload GitHub Pages Artifact
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: playwright-report/
-
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    # Re-upload artifact (optional separate job)
+    - name: Upload Playwright Report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: playwright-report-final
+        path: playwright-report/
+        retention-days: 30
