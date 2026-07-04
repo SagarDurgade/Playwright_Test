@@ -8,8 +8,8 @@ test.describe('MakeMeTrip - End to End Flight & Travel Search', () => {
         const pages = createPages(page)
 
         // Arrange
-        await page.goto(testData.urls.makemytripUrl)
-        await page.waitForLoadState('networkidle')
+        await page.goto(testData.urls.makemytripUrl, { waitUntil: 'domcontentloaded' })
+        await page.waitForLoadState('load')
 
         // Act — full E2E: select trip type → fill cities → submit search
         await pages.makemytrip.searchOneWayFlightBetweenCities(
@@ -28,8 +28,8 @@ test.describe('MakeMeTrip - End to End Flight & Travel Search', () => {
         const pages = createPages(page)
 
         // Arrange
-        await page.goto(testData.urls.makemytripUrl)
-        await page.waitForLoadState('networkidle')
+        await page.goto(testData.urls.makemytripUrl, { waitUntil: 'domcontentloaded' })
+        await page.waitForLoadState('load')
 
         // Act — full E2E: select round trip → fill cities → open return date → submit
         await pages.makemytrip.searchRoundTripFlightBetweenCities(
@@ -48,8 +48,8 @@ test.describe('MakeMeTrip - End to End Flight & Travel Search', () => {
         const pages = createPages(page)
 
         // Arrange
-        await page.goto(testData.urls.makemytripUrl)
-        await page.waitForLoadState('networkidle')
+        await page.goto(testData.urls.makemytripUrl, { waitUntil: 'domcontentloaded' })
+        await page.waitForLoadState('load')
 
         // Act — full E2E: click Hotels tab → enter city → submit search
         await pages.makemytrip.openHotelsSectionAndSearchCity(

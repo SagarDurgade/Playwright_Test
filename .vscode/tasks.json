@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Makemytrip One-Way Flight E2E Test",
+			"type": "shell",
+			"command": "npx playwright test --trace on -g \"should land on flight search results page after completing a one-way flight search\" --headed",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Makemytrip One-Way Flight E2E Test (real Chrome)",
+			"type": "shell",
+			"command": "npx playwright test --trace on -g \"should land on flight search results page after completing a one-way flight search\" --headed",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Makemytrip One-Way Flight E2E Test (fixed overlay)",
+			"type": "shell",
+			"command": "npx playwright test --trace on -g \"should land on flight search results page after completing a one-way flight search\" --headed",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

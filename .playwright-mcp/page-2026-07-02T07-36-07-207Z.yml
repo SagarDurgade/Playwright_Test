@@ -1,0 +1,1479 @@
+- generic [ref=f2e2]:
+  - generic [ref=f2e5]:
+    - link "Naukri Logo" [ref=f2e6] [cursor=pointer]:
+      - /url: https://www.naukri.com
+      - img "Naukri Logo" [ref=f2e7]
+    - navigation:
+      - list [ref=f2e8]:
+        - listitem [ref=f2e9]:
+          - link "Jobs" [ref=f2e10] [cursor=pointer]:
+            - /url: https://www.naukri.com
+            - generic [ref=f2e11]: Jobs
+          - generic:
+            - list:
+              - listitem:
+                - generic: Popular categories
+              - listitem:
+                - link "IT jobs":
+                  - /url: https://www.naukri.com/it-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: IT jobs
+              - listitem:
+                - link "Sales jobs":
+                  - /url: https://www.naukri.com/sales-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Sales jobs
+              - listitem:
+                - link "Marketing jobs":
+                  - /url: https://www.naukri.com/marketing-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Marketing jobs
+              - listitem:
+                - link "Data Science jobs":
+                  - /url: https://www.naukri.com/data-science-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Data Science jobs
+              - listitem:
+                - link "HR jobs":
+                  - /url: https://www.naukri.com/hr-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: HR jobs
+              - listitem:
+                - link "Engineering jobs":
+                  - /url: https://www.naukri.com/engineering-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Engineering jobs
+            - list:
+              - listitem:
+                - generic: Jobs in demand
+              - listitem:
+                - link "Fresher jobs":
+                  - /url: https://www.naukri.com/fresher-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Fresher jobs
+              - listitem:
+                - link "MNC jobs":
+                  - /url: https://www.naukri.com/mnc-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: MNC jobs
+              - listitem:
+                - link "Remote jobs":
+                  - /url: https://www.naukri.com/remote-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Remote jobs
+              - listitem:
+                - link "Work from home jobs":
+                  - /url: https://www.naukri.com/work-from-home-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Work from home jobs
+              - listitem:
+                - link "Walk-in jobs":
+                  - /url: https://www.naukri.com/walkin-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Walk-in jobs
+              - listitem:
+                - link "Part-time jobs":
+                  - /url: https://www.naukri.com/part-time-jobs?src=gnbjobs_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Part-time jobs
+            - list:
+              - listitem:
+                - generic: Jobs by location
+              - listitem:
+                - link "Jobs in Delhi":
+                  - /url: https://www.naukri.com/jobs-in-delhi-ncr
+                  - generic:
+                    - generic:
+                      - generic: Jobs in Delhi
+              - listitem:
+                - link "Jobs in Mumbai":
+                  - /url: https://www.naukri.com/jobs-in-mumbai
+                  - generic:
+                    - generic:
+                      - generic: Jobs in Mumbai
+              - listitem:
+                - link "Jobs in Bangalore":
+                  - /url: https://www.naukri.com/jobs-in-bangalore
+                  - generic:
+                    - generic:
+                      - generic: Jobs in Bangalore
+              - listitem:
+                - link "Jobs in Hyderabad":
+                  - /url: https://www.naukri.com/jobs-in-hyderabad-secunderabad
+                  - generic:
+                    - generic:
+                      - generic: Jobs in Hyderabad
+              - listitem:
+                - link "Jobs in Chennai":
+                  - /url: https://www.naukri.com/jobs-in-chennai
+                  - generic:
+                    - generic:
+                      - generic: Jobs in Chennai
+              - listitem:
+                - link "Jobs in Pune":
+                  - /url: https://www.naukri.com/jobs-in-pune
+                  - generic:
+                    - generic:
+                      - generic: Jobs in Pune
+        - listitem [ref=f2e12]:
+          - link "Companies" [ref=f2e13] [cursor=pointer]:
+            - /url: https://www.naukri.com/companies-hiring-in-india?src=gnbCompanies_homepage_srch
+            - generic [ref=f2e14]: Companies
+          - generic:
+            - list:
+              - listitem:
+                - generic: Explore categories
+              - listitem:
+                - link "Unicorn":
+                  - /url: https://www.naukri.com/unicorn-companies-in-india-cat102?title=Unicorns%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Unicorn
+              - listitem:
+                - link "MNC":
+                  - /url: https://www.naukri.com/mnc-companies-in-india-cat101?title=MNCs%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: MNC
+              - listitem:
+                - link "Startup":
+                  - /url: https://www.naukri.com/startup-companies-in-india-cat103?title=Startups%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Startup
+              - listitem:
+                - link "Product based":
+                  - /url: https://www.naukri.com/product-companies-in-india-cat106?title=Product%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Product based
+              - listitem:
+                - link "Internet":
+                  - /url: https://www.naukri.com/internet-companies-in-india-cat105?title=Internet%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Internet
+            - list:
+              - listitem:
+                - generic: Explore collections
+              - listitem:
+                - link "Top companies":
+                  - /url: https://www.naukri.com/companies-hiring-in-india?src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Top companies
+              - listitem:
+                - link "IT companies":
+                  - /url: https://www.naukri.com/it-companies-in-india-cat116?src=gnbCompanies_homepage_srch&title=IT%20Companies%20Hiring
+                  - generic:
+                    - generic:
+                      - generic: IT companies
+              - listitem:
+                - link "Fintech companies":
+                  - /url: https://www.naukri.com/fintech-and-payments-companies-in-india-cat108?title=Fintech%20%26%20Payments%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Fintech companies
+              - listitem:
+                - link "Sponsored companies":
+                  - /url: https://www.naukri.com/allcompanies?searchType=standardLogo&title=Sponsored+companies&branding=%257B%2522pagename%2522%253A%2522ni-desktop-standard-viewAll%2522%257D&pageNo=1&qcount=47&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Sponsored companies
+              - listitem:
+                - link "Featured companies":
+                  - /url: https://www.naukri.com/allcompanies?searchType=premiumLogo&title=Featured+companies+actively+hiring&branding=%257B%2522pagename%2522%253A%2522ni-desktop-premium-viewAll%2522%257D&pageNo=1&qcount=47&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Featured companies
+            - list:
+              - listitem:
+                - generic:
+                  - text: Research companies
+                  - generic: by
+                  - img
+                  - generic: Ambitionbox
+              - listitem:
+                - link "Interview questions":
+                  - /url: https://www.ambitionbox.com/interviews?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+                  - generic:
+                    - generic:
+                      - generic: Interview questions
+              - listitem:
+                - link "Company salaries":
+                  - /url: https://www.ambitionbox.com/salaries?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+                  - generic:
+                    - generic:
+                      - generic: Company salaries
+              - listitem:
+                - link "Company reviews":
+                  - /url: https://www.ambitionbox.com/reviews?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+                  - generic:
+                    - generic:
+                      - generic: Company reviews
+              - listitem:
+                - link "Salary Calculator":
+                  - /url: https://www.ambitionbox.com/salaries/take-home-salary-calculator?utm_campaign=gnb&utm_source=naukri&utm_medium=desktop
+                  - generic:
+                    - generic:
+                      - generic: Salary Calculator
+        - listitem [ref=f2e15]:
+          - link "Services" [ref=f2e16] [cursor=pointer]:
+            - /url: https://resume.naukri.com/?fftid=100001
+            - generic [ref=f2e17]: Services
+          - generic:
+            - list:
+              - listitem:
+                - generic: Resume writing
+              - listitem:
+                - link "Text resume":
+                  - /url: https://resume.naukri.com/resume-writing-services?fftid=101001
+                  - generic:
+                    - generic:
+                      - generic: Text resume
+              - listitem:
+                - link "Visual resume":
+                  - /url: https://resume.naukri.com/visual-resume-writing-services?fftid=101002
+                  - generic:
+                    - generic:
+                      - generic: Visual resume
+              - listitem:
+                - link "Resume critique":
+                  - /url: https://resume.naukri.com/resume-critique?fftid=101006
+                  - generic:
+                    - generic:
+                      - generic: Resume critique
+              - listitem:
+                - generic: Find Jobs
+              - listitem:
+                - link "Jobs4u":
+                  - /url: https://resume.naukri.com/job-alerts-on-mobile-mail?fftid=101011#jobmail
+                  - generic:
+                    - generic:
+                      - generic: Jobs4u
+              - listitem:
+                - link "Priority applicant":
+                  - /url: https://resume.naukri.com/priority-job-application?fftid=101019
+                  - generic:
+                    - generic:
+                      - generic: Priority applicant
+              - listitem:
+                - link "Contact us":
+                  - /url: https://resume.naukri.com/contact-us?fftid=101015
+                  - generic:
+                    - generic:
+                      - generic: Contact us
+            - list:
+              - listitem:
+                - generic: Get recruiter's attention
+              - listitem:
+                - link "Resume display":
+                  - /url: https://resume.naukri.com/resume-display?fftid=101009
+                  - generic:
+                    - generic:
+                      - generic: Resume display
+              - listitem:
+                - generic: Monthly subscriptions
+              - listitem:
+                - link "Basic & premium plans":
+                  - /url: https://resume.naukri.com/subscription-product?fftid=101025
+                  - generic:
+                    - generic:
+                      - generic: Basic & premium plans
+            - list:
+              - listitem:
+                - generic: Free resume resources
+              - listitem:
+                - link "Resume maker":
+                  - /url: https://www.naukri.com/resume-maker?utmTerm=ResumePro_Gnb&utmContent=gnbServices
+                  - generic:
+                    - generic:
+                      - generic: Resume maker
+              - listitem:
+                - link "Resume quality score":
+                  - /url: https://resume.naukri.com/resume-quality-score?fftid=101003
+                  - generic:
+                    - generic:
+                      - generic: Resume quality score
+              - listitem:
+                - link "Resume samples":
+                  - /url: https://resume.naukri.com/resume-samples?fftid=101004
+                  - generic:
+                    - generic:
+                      - generic: Resume samples
+              - listitem:
+                - link "Job letter samples":
+                  - /url: https://resume.naukri.com/job-letter-format
+                  - generic:
+                    - generic:
+                      - generic: Job letter samples
+    - generic [ref=f2e18]:
+      - link "Login" [ref=f2e19] [cursor=pointer]:
+        - /url: https://login.naukri.com/nLogin/Login.php
+      - link "Register" [ref=f2e20] [cursor=pointer]:
+        - /url: https://www.naukri.com/registration/createAccount?othersrcp=22636
+    - listitem [ref=f2e21]:
+      - generic [ref=f2e23]:
+        - text: For employers
+        - generic [ref=f2e24]: 
+      - generic:
+        - list:
+          - listitem:
+            - link "Buy online":
+              - /url: https://www.naukri.com/recruit/buy-resume-database-access-packages
+              - generic:
+                - generic:
+                  - generic: Buy online
+          - listitem:
+            - link "Naukri Talent Cloud":
+              - /url: https://www.naukritalentcloud.com?utmSource=jobseekerGNB
+              - generic:
+                - generic:
+                  - generic: Naukri Talent Cloud
+          - listitem:
+            - link "Employer Login":
+              - /url: https://www.naukri.com/recruit/login
+              - generic:
+                - generic:
+                  - generic: Employer Login
+  - generic [ref=f2e25]:
+    - heading "Find your dream job now" [level=1] [ref=f2e26]
+    - generic [ref=f2e27]: 5 lakh+ jobs for you to explore
+  - generic [ref=f2e30]:
+    - textbox "Enter skills / designations / companies" [ref=f2e37]
+    - generic [ref=f2e40]:
+      - textbox "Select experience" [ref=f2e41]
+      - generic [ref=f2e42] [cursor=pointer]: ˅
+    - textbox "Enter location" [ref=f2e50]
+    - generic [ref=f2e51] [cursor=pointer]: Search
+  - generic [ref=f2e55]:
+    - generic [ref=f2e59]:
+      - generic [ref=f2e60]:
+        - link "Remote-img Remote arrow-icon" [ref=f2e61] [cursor=pointer]:
+          - /url: https://www.naukri.com/remote-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Remote-img" [ref=f2e62]
+          - generic "Remote" [ref=f2e63]
+          - img "arrow-icon" [ref=f2e64]
+        - link "MNC-img MNC arrow-icon" [ref=f2e65] [cursor=pointer]:
+          - /url: https://www.naukri.com/mnc-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "MNC-img" [ref=f2e66]
+          - generic "MNC" [ref=f2e67]
+          - img "arrow-icon" [ref=f2e68]
+        - link "Startup-img Startup arrow-icon" [ref=f2e69] [cursor=pointer]:
+          - /url: https://www.naukri.com/startup-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Startup-img" [ref=f2e70]
+          - generic "Startup" [ref=f2e71]
+          - img "arrow-icon" [ref=f2e72]
+        - link "Supply Chain-img Supply Chain arrow-icon" [ref=f2e73] [cursor=pointer]:
+          - /url: https://www.naukri.com/supply-chain-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Supply Chain-img" [ref=f2e74]
+          - generic "Supply Chain" [ref=f2e75]
+          - img "arrow-icon" [ref=f2e76]
+        - link "Engineering-img Engineering arrow-icon" [ref=f2e77] [cursor=pointer]:
+          - /url: https://www.naukri.com/engineering-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Engineering-img" [ref=f2e78]
+          - generic "Engineering" [ref=f2e79]
+          - img "arrow-icon" [ref=f2e80]
+        - link "Banking & Finance-img Banking & Finance arrow-icon" [ref=f2e81] [cursor=pointer]:
+          - /url: https://www.naukri.com/bfsi-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Banking & Finance-img" [ref=f2e82]
+          - generic "Banking & Finance" [ref=f2e83]
+          - img "arrow-icon" [ref=f2e84]
+      - generic [ref=f2e85]:
+        - link "Project Mgmt-img Project Mgmt arrow-icon" [ref=f2e86] [cursor=pointer]:
+          - /url: https://www.naukri.com/project-management-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Project Mgmt-img" [ref=f2e87]
+          - generic "Project Mgmt" [ref=f2e88]
+          - img "arrow-icon" [ref=f2e89]
+        - link "HR-img HR arrow-icon" [ref=f2e90] [cursor=pointer]:
+          - /url: https://www.naukri.com/hr-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "HR-img" [ref=f2e91]
+          - generic "HR" [ref=f2e92]
+          - img "arrow-icon" [ref=f2e93]
+        - link "Fresher-img Fresher arrow-icon" [ref=f2e94] [cursor=pointer]:
+          - /url: https://www.naukri.com/fresher-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Fresher-img" [ref=f2e95]
+          - generic "Fresher" [ref=f2e96]
+          - img "arrow-icon" [ref=f2e97]
+        - link "Marketing-img Marketing arrow-icon" [ref=f2e98] [cursor=pointer]:
+          - /url: https://www.naukri.com/marketing-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Marketing-img" [ref=f2e99]
+          - generic "Marketing" [ref=f2e100]
+          - img "arrow-icon" [ref=f2e101]
+        - link "Sales-img Sales arrow-icon" [ref=f2e102] [cursor=pointer]:
+          - /url: https://www.naukri.com/sales-jobs?src=discovery_trendingWdgt_homepage_srch
+          - img "Sales-img" [ref=f2e103]
+          - generic "Sales" [ref=f2e104]
+          - img "arrow-icon" [ref=f2e105]
+    - generic [ref=f2e109]:
+      - heading "Top companies hiring now" [level=2] [ref=f2e110]
+      - generic [ref=f2e112]:
+        - generic [ref=f2e113]:
+          - generic [ref=f2e115] [cursor=pointer]:
+            - generic [ref=f2e116]:
+              - link "MNCs" [ref=f2e117]:
+                - /url: https://www.naukri.com/mnc-companies-in-india-cat101?title=MNCs+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e118]
+            - generic [ref=f2e119]: 2.4K+ are actively hiring
+          - generic [ref=f2e126] [cursor=pointer]:
+            - generic [ref=f2e127]:
+              - link "Product" [ref=f2e128]:
+                - /url: https://www.naukri.com/product-companies-in-india-cat106?title=Product+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e129]
+            - generic [ref=f2e130]: 1.3K+ are actively hiring
+          - generic [ref=f2e137] [cursor=pointer]:
+            - generic [ref=f2e138]:
+              - link "Banking & Finance" [ref=f2e139]:
+                - /url: https://www.naukri.com/banking-and-finance-companies-in-india-cat110?title=Banking+%26+Financial+services+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e140]
+            - generic [ref=f2e141]: 464 are actively hiring
+          - generic [ref=f2e148] [cursor=pointer]:
+            - generic [ref=f2e149]:
+              - link "Hospitality" [ref=f2e150]:
+                - /url: https://www.naukri.com/travel-and-hotel-companies-in-india-cat114?title=Travel+%26+Hotel+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e151]
+            - generic [ref=f2e152]: 155 are actively hiring
+          - generic [ref=f2e159] [cursor=pointer]:
+            - generic [ref=f2e160]:
+              - link "Fintech" [ref=f2e161]:
+                - /url: https://www.naukri.com/fintech-and-payments-companies-in-india-cat108?title=Fintech+%26+Payments+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e162]
+            - generic [ref=f2e163]: 156 are actively hiring
+          - generic [ref=f2e170] [cursor=pointer]:
+            - generic [ref=f2e171]:
+              - link "FMCG & Retail" [ref=f2e172]:
+                - /url: https://www.naukri.com/fmcg-and-retail-companies-in-india-cat113?title=FMCG+%26+Retail+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e173]
+            - generic [ref=f2e174]: 188 are actively hiring
+          - generic [ref=f2e181] [cursor=pointer]:
+            - generic [ref=f2e182]:
+              - link "Startups" [ref=f2e183]:
+                - /url: https://www.naukri.com/startup-companies-in-india-cat103?title=Startups+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e184]
+            - generic [ref=f2e185]: 808 are actively hiring
+          - generic [ref=f2e192] [cursor=pointer]:
+            - generic [ref=f2e193]:
+              - link "Edtech" [ref=f2e194]:
+                - /url: https://www.naukri.com/edtech-companies-in-india-cat107?title=Edtech+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e195]
+            - generic [ref=f2e196]: 170 are actively hiring
+          - generic [ref=f2e203] [cursor=pointer]:
+            - generic [ref=f2e204]:
+              - link "Healthcare" [ref=f2e205]:
+                - /url: https://www.naukri.com/healthcare-and-lifesciences-companies-in-india-cat111?title=Healthcare+%26+Lifesciences+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e206]
+            - generic [ref=f2e207]: 740 are actively hiring
+          - generic [ref=f2e214] [cursor=pointer]:
+            - generic [ref=f2e215]:
+              - link "Unicorns" [ref=f2e216]:
+                - /url: https://www.naukri.com/unicorn-companies-in-india-cat102?title=Unicorns+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e217]
+            - generic [ref=f2e218]: 100 are actively hiring
+          - generic [ref=f2e225] [cursor=pointer]:
+            - generic [ref=f2e226]:
+              - link "Internet" [ref=f2e227]:
+                - /url: https://www.naukri.com/internet-companies-in-india-cat105?title=Internet+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e228]
+            - generic [ref=f2e229]: 231 are actively hiring
+          - generic [ref=f2e236] [cursor=pointer]:
+            - generic [ref=f2e237]:
+              - link "Manufacturing" [ref=f2e238]:
+                - /url: https://www.naukri.com/manufacturing-companies-in-india-cat112?title=Manufacturing+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e239]
+            - generic [ref=f2e240]: 1.3K+ are actively hiring
+          - generic [ref=f2e247] [cursor=pointer]:
+            - generic [ref=f2e248]:
+              - link "Fortune 500" [ref=f2e249]:
+                - /url: https://www.naukri.com/fortune-500-companies-in-india-cat115?title=Fortune+500+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e250]
+            - generic [ref=f2e251]: 130 are actively hiring
+          - generic [ref=f2e258] [cursor=pointer]:
+            - generic [ref=f2e259]:
+              - link "B2C" [ref=f2e260]:
+                - /url: https://www.naukri.com/b2c-companies-in-india-cat104?title=B2C+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+              - img "arrow-icon" [ref=f2e261]
+            - generic [ref=f2e262]: 2.5K+ are actively hiring
+        - button "Next slide" [ref=f2e268] [cursor=pointer]
+    - generic [ref=f2e272]:
+      - heading "Featured companies actively hiring" [level=2] [ref=f2e273]
+      - generic [ref=f2e276]:
+        - generic [ref=f2e278] [cursor=pointer]:
+          - img "Cognizant" [ref=f2e280]
+          - generic [ref=f2e281]:
+            - heading "Cognizant" [level=3] [ref=f2e282]:
+              - link "Cognizant" [ref=f2e283]:
+                - /url: https://www.naukri.com/cognizant-overview-4156?src=premiumLogo
+            - generic [ref=f2e284]:
+              - img "rating" [ref=f2e286]
+              - generic [ref=f2e287]: "3.7"
+              - generic [ref=f2e288]: 62.5K+ reviews
+          - paragraph [ref=f2e290]: Leading ITeS company with global presence.
+          - link "View jobs" [ref=f2e292]:
+            - /url: https://www.naukri.com/cognizant-overview-4156?tab=jobs&src=premiumLogo
+        - generic [ref=f2e294] [cursor=pointer]:
+          - img "JPMorgan Chase Bank" [ref=f2e296]
+          - generic [ref=f2e297]:
+            - heading "JPMorgan Chase Bank" [level=3] [ref=f2e298]:
+              - link "JPMorgan Chase Bank" [ref=f2e299]:
+                - /url: https://www.naukri.com/jpmorgan-chase-bank-overview-240936?src=premiumLogo
+            - generic [ref=f2e300]:
+              - img "rating" [ref=f2e302]
+              - generic [ref=f2e303]: "3.8"
+              - generic [ref=f2e304]: 8K+ reviews
+          - paragraph [ref=f2e306]: Leader in financial services.
+          - link "View jobs" [ref=f2e308]:
+            - /url: https://www.naukri.com/jpmorgan-chase-bank-overview-240936?tab=jobs&src=premiumLogo
+        - generic [ref=f2e310] [cursor=pointer]:
+          - img "Reliance Retail" [ref=f2e312]
+          - generic [ref=f2e313]:
+            - heading "Reliance Retail" [level=3] [ref=f2e314]:
+              - link "Reliance Retail" [ref=f2e315]:
+                - /url: https://www.naukri.com/reliance-retail-overview-214440?src=premiumLogo
+            - generic [ref=f2e316]:
+              - img "rating" [ref=f2e318]
+              - generic [ref=f2e319]: "3.9"
+              - generic [ref=f2e320]: 27.7K+ reviews
+          - paragraph [ref=f2e322]: Building India's largest retail company
+          - link "View jobs" [ref=f2e324]:
+            - /url: https://www.naukri.com/reliance-retail-overview-214440?tab=jobs&src=premiumLogo
+        - generic [ref=f2e326] [cursor=pointer]:
+          - img "Siemens" [ref=f2e328]
+          - generic [ref=f2e329]:
+            - heading "Siemens" [level=3] [ref=f2e330]:
+              - link "Siemens" [ref=f2e331]:
+                - /url: https://www.naukri.com/siemens-overview-40604?src=premiumLogo
+            - generic [ref=f2e332]:
+              - img "rating" [ref=f2e334]
+              - generic [ref=f2e335]: "4.0"
+              - generic [ref=f2e336]: 5.9K+ reviews
+          - paragraph [ref=f2e338]: "Create a better #TomorrowWithUs"
+          - link "View jobs" [ref=f2e340]:
+            - /url: https://www.naukri.com/siemens-overview-40604?tab=jobs&src=premiumLogo
+        - generic [ref=f2e342] [cursor=pointer]:
+          - img "FIS" [ref=f2e344]
+          - generic [ref=f2e345]:
+            - heading "FIS" [level=3] [ref=f2e346]:
+              - link "FIS" [ref=f2e347]:
+                - /url: https://www.naukri.com/fis-overview-21746?src=premiumLogo
+            - generic [ref=f2e348]:
+              - img "rating" [ref=f2e350]
+              - generic [ref=f2e351]: "3.7"
+              - generic [ref=f2e352]: 6.7K+ reviews
+          - paragraph [ref=f2e354]: Global leader in financial services technology.
+          - link "View jobs" [ref=f2e356]:
+            - /url: https://www.naukri.com/fis-overview-21746?tab=jobs&src=premiumLogo
+        - generic [ref=f2e358] [cursor=pointer]:
+          - img "Amgen Inc" [ref=f2e360]
+          - generic [ref=f2e361]:
+            - heading "Amgen Inc" [level=3] [ref=f2e362]:
+              - link "Amgen Inc" [ref=f2e363]:
+                - /url: https://www.naukri.com/amgen-inc-overview-11114410?src=premiumLogo
+            - generic [ref=f2e364]:
+              - img "rating" [ref=f2e366]
+              - generic [ref=f2e367]: "2.8"
+              - generic [ref=f2e368]: 173 reviews
+          - paragraph [ref=f2e370]: LIVE. WIN. THRIVE.
+          - link "View jobs" [ref=f2e372]:
+            - /url: https://www.naukri.com/amgen-inc-overview-11114410?tab=jobs&src=premiumLogo
+        - generic [ref=f2e374] [cursor=pointer]:
+          - img "Coforge" [ref=f2e376]
+          - generic [ref=f2e377]:
+            - heading "Coforge" [level=3] [ref=f2e378]:
+              - link "Coforge" [ref=f2e379]:
+                - /url: https://www.naukri.com/coforge-overview-233334?src=premiumLogo
+            - generic [ref=f2e380]:
+              - img "rating" [ref=f2e382]
+              - generic [ref=f2e383]: "3.3"
+              - generic [ref=f2e384]: 9K+ reviews
+          - paragraph [ref=f2e386]: Global digital services and solutions provider.
+          - link "View jobs" [ref=f2e388]:
+            - /url: https://www.naukri.com/coforge-overview-233334?tab=jobs&src=premiumLogo
+        - generic [ref=f2e390] [cursor=pointer]:
+          - img "Reliance Industries (RIL)" [ref=f2e392]
+          - generic [ref=f2e393]:
+            - heading "Reliance Industries (RIL)" [level=3] [ref=f2e394]:
+              - link "Reliance Industries (RIL)" [ref=f2e395]:
+                - /url: https://www.naukri.com/reliance-industries-ril-overview-29798?src=premiumLogo
+            - generic [ref=f2e396]:
+              - img "rating" [ref=f2e398]
+              - generic [ref=f2e399]: "4.0"
+              - generic [ref=f2e400]: 20.6K+ reviews
+          - paragraph [ref=f2e402]: Indian multinational conglomerate company.
+          - link "View jobs" [ref=f2e404]:
+            - /url: https://www.naukri.com/reliance-industries-ril-overview-29798?tab=jobs&src=premiumLogo
+        - generic [ref=f2e406] [cursor=pointer]:
+          - img "Bread Financial" [ref=f2e408]
+          - generic [ref=f2e409]:
+            - heading "Bread Financial" [level=3] [ref=f2e410]:
+              - link "Bread Financial" [ref=f2e411]:
+                - /url: https://www.naukri.com/bread-financial-overview-6254085?src=premiumLogo
+            - generic [ref=f2e412]:
+              - img "rating" [ref=f2e414]
+              - generic [ref=f2e415]: "3.7"
+              - generic [ref=f2e416]: 243 reviews
+          - paragraph [ref=f2e418]: Personalizing experiences with tech.
+          - link "View jobs" [ref=f2e420]:
+            - /url: https://www.naukri.com/bread-financial-overview-6254085?tab=jobs&src=premiumLogo
+        - generic [ref=f2e422] [cursor=pointer]:
+          - img "LYRIC" [ref=f2e424]
+          - generic [ref=f2e425]:
+            - heading "LYRIC" [level=3] [ref=f2e426]:
+              - link "LYRIC" [ref=f2e427]:
+                - /url: https://www.naukri.com/lyric-overview-3053304?src=premiumLogo
+            - generic [ref=f2e428]:
+              - img "rating" [ref=f2e430]
+              - generic [ref=f2e431]: "2.3"
+              - generic [ref=f2e432]: 2 reviews
+          - paragraph [ref=f2e434]: We aim to simplify the business of care.
+          - link "View jobs" [ref=f2e436]:
+            - /url: https://www.naukri.com/lyric-overview-3053304?tab=jobs&src=premiumLogo
+        - generic [ref=f2e438] [cursor=pointer]:
+          - img "Persistent" [ref=f2e440]
+          - generic [ref=f2e441]:
+            - heading "Persistent" [level=3] [ref=f2e442]:
+              - link "Persistent" [ref=f2e443]:
+                - /url: https://www.naukri.com/persistent-overview-3835862?src=premiumLogo
+            - generic [ref=f2e444]:
+              - img "rating" [ref=f2e446]
+              - generic [ref=f2e447]: "3.5"
+              - generic [ref=f2e448]: 5.2K+ reviews
+          - paragraph [ref=f2e450]: Trusted global solutions company.
+          - link "View jobs" [ref=f2e452]:
+            - /url: https://www.naukri.com/persistent-overview-3835862?tab=jobs&src=premiumLogo
+        - generic [ref=f2e454] [cursor=pointer]:
+          - img "Optum" [ref=f2e456]
+          - generic [ref=f2e457]:
+            - heading "Optum" [level=3] [ref=f2e458]:
+              - link "Optum" [ref=f2e459]:
+                - /url: https://www.naukri.com/optum-overview-4847169?src=premiumLogo
+            - generic [ref=f2e460]:
+              - img "rating" [ref=f2e462]
+              - generic [ref=f2e463]: "4.0"
+              - generic [ref=f2e464]: 8.2K+ reviews
+          - paragraph [ref=f2e466]: Leading digital health tech company in India.
+          - link "View jobs" [ref=f2e468]:
+            - /url: https://www.naukri.com/optum-overview-4847169?tab=jobs&src=premiumLogo
+      - link "View all companies" [ref=f2e471] [cursor=pointer]:
+        - /url: https://www.naukri.com/allcompanies?searchType=premiumLogo&title=Featured+companies+actively+hiring&branding=%257B%2522pagename%2522%253A%2522ni-desktop-premium-viewAll%2522%257D&pageNo=1&qcount=47
+    - generic [ref=f2e475]:
+      - img "nc-logo" [ref=f2e476]
+      - generic [ref=f2e477]:
+        - paragraph [ref=f2e478]: Introducing a career platform for college students & fresh grads
+        - paragraph [ref=f2e479]: Explore contests, webinars, take aptitude test, prepare for your dream career & find jobs & internships
+        - generic [ref=f2e480]:
+          - link "Expert speak arrow" [ref=f2e481] [cursor=pointer]:
+            - /url: /campus/webinars
+            - generic [ref=f2e482]:
+              - generic [ref=f2e483]: Expert speak
+              - img "arrow" [ref=f2e484]
+          - link "Contests arrow" [ref=f2e485] [cursor=pointer]:
+            - /url: /campus/contests
+            - generic [ref=f2e486]:
+              - generic [ref=f2e487]: Contests
+              - img "arrow" [ref=f2e488]
+          - link "NCAT arrow" [ref=f2e489] [cursor=pointer]:
+            - /url: /campus/ncat-aptitude-test
+            - generic [ref=f2e490]:
+              - generic [ref=f2e491]: NCAT
+              - img "arrow" [ref=f2e492]
+          - link "Pathfinder arrow" [ref=f2e493] [cursor=pointer]:
+            - /url: /campus/pathfinder
+            - generic [ref=f2e494]:
+              - generic [ref=f2e495]: Pathfinder
+              - img "arrow" [ref=f2e496]
+          - link "Jobs & Internships arrow" [ref=f2e497] [cursor=pointer]:
+            - /url: /campus/find-work
+            - generic [ref=f2e498]:
+              - generic [ref=f2e499]: Jobs & Internships
+              - img "arrow" [ref=f2e500]
+      - link "Explore now" [ref=f2e501] [cursor=pointer]:
+        - /url: https://www.naukri.com/campus
+      - generic [ref=f2e502]: Just launched
+    - generic [ref=f2e507]:
+      - generic [ref=f2e508]:
+        - img "naukri role-collection" [ref=f2e509]
+        - paragraph [ref=f2e510]: Discover jobs across popular roles
+        - paragraph [ref=f2e511]: Select a role and we'll show you relevant jobs for it!
+      - generic [ref=f2e514]:
+        - generic [ref=f2e516]:
+          - generic [ref=f2e519] [cursor=pointer]:
+            - link "Full Stack Developer" [ref=f2e520]:
+              - /url: https://www.naukri.com/full-stack-developer-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e521]:
+              - text: 22.6K+ Jobs
+              - img "arrow-icon" [ref=f2e522]
+          - generic [ref=f2e525] [cursor=pointer]:
+            - link "Mobile / App Developer" [ref=f2e526]:
+              - /url: https://www.naukri.com/mobile-application-development-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e527]:
+              - text: 3.4K+ Jobs
+              - img "arrow-icon" [ref=f2e528]
+          - generic [ref=f2e531] [cursor=pointer]:
+            - link "Front End Developer" [ref=f2e532]:
+              - /url: https://www.naukri.com/front-end-developer-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e533]:
+              - text: 6.6K+ Jobs
+              - img "arrow-icon" [ref=f2e534]
+          - generic [ref=f2e537] [cursor=pointer]:
+            - link "DevOps Engineer" [ref=f2e538]:
+              - /url: https://www.naukri.com/devops-engineer-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e539]:
+              - text: 2.9K+ Jobs
+              - img "arrow-icon" [ref=f2e540]
+          - generic [ref=f2e543] [cursor=pointer]:
+            - link "Engineering Manager" [ref=f2e544]:
+              - /url: https://www.naukri.com/engineering-manager-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e545]:
+              - text: 1.4K+ Jobs
+              - img "arrow-icon" [ref=f2e546]
+          - generic [ref=f2e549] [cursor=pointer]:
+            - link "Technical Lead" [ref=f2e550]:
+              - /url: https://www.naukri.com/technical-lead-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e551]:
+              - text: 10.2K+ Jobs
+              - img "arrow-icon" [ref=f2e552]
+        - generic [ref=f2e554]:
+          - generic [ref=f2e557] [cursor=pointer]:
+            - link "Automation Test Engineer" [ref=f2e558]:
+              - /url: https://www.naukri.com/automation-test-engineer-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e559]:
+              - text: 3.4K+ Jobs
+              - img "arrow-icon" [ref=f2e560]
+          - generic [ref=f2e563] [cursor=pointer]:
+            - link "Cyber Security" [ref=f2e564]:
+              - /url: https://www.naukri.com/cyber-security-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e565]:
+              - text: 1K+ Jobs
+              - img "arrow-icon" [ref=f2e566]
+          - generic [ref=f2e569] [cursor=pointer]:
+            - link "Technical Architect" [ref=f2e570]:
+              - /url: https://www.naukri.com/technical-architect-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e571]:
+              - text: 6K+ Jobs
+              - img "arrow-icon" [ref=f2e572]
+          - generic [ref=f2e575] [cursor=pointer]:
+            - link "Business Analyst" [ref=f2e576]:
+              - /url: https://www.naukri.com/business-analyst-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e577]:
+              - text: 4.6K+ Jobs
+              - img "arrow-icon" [ref=f2e578]
+          - generic [ref=f2e581] [cursor=pointer]:
+            - link "Data Scientist" [ref=f2e582]:
+              - /url: https://www.naukri.com/data-scientist-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e583]:
+              - text: 1.7K+ Jobs
+              - img "arrow-icon" [ref=f2e584]
+          - generic [ref=f2e587] [cursor=pointer]:
+            - link "Program Manager - Technology / IT" [ref=f2e588]:
+              - /url: https://www.naukri.com/technical-program-manager-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e589]:
+              - text: 641 Jobs
+              - img "arrow-icon" [ref=f2e590]
+        - generic [ref=f2e592]:
+          - generic [ref=f2e595] [cursor=pointer]:
+            - link "Product Manager" [ref=f2e596]:
+              - /url: https://www.naukri.com/product-manager-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e597]:
+              - text: 1.4K+ Jobs
+              - img "arrow-icon" [ref=f2e598]
+          - generic [ref=f2e601] [cursor=pointer]:
+            - link "UI / UX Designer" [ref=f2e602]:
+              - /url: https://www.naukri.com/ui-ux-designer-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e603]:
+              - text: 1.8K+ Jobs
+              - img "arrow-icon" [ref=f2e604]
+          - generic [ref=f2e607] [cursor=pointer]:
+            - link "Research Analyst" [ref=f2e608]:
+              - /url: https://www.naukri.com/research-analyst-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e609]:
+              - text: 109 Jobs
+              - img "arrow-icon" [ref=f2e610]
+          - generic [ref=f2e613] [cursor=pointer]:
+            - link "Branch Manager" [ref=f2e614]:
+              - /url: https://www.naukri.com/branch-manager-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e615]:
+              - text: 366 Jobs
+              - img "arrow-icon" [ref=f2e616]
+          - generic [ref=f2e619] [cursor=pointer]:
+            - link "Functional Consultant" [ref=f2e620]:
+              - /url: https://www.naukri.com/functional-consultant-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e621]:
+              - text: 4.8K+ Jobs
+              - img "arrow-icon" [ref=f2e622]
+          - generic [ref=f2e625] [cursor=pointer]:
+            - link "Chartered Accountant (CA)" [ref=f2e626]:
+              - /url: https://www.naukri.com/chartered-accountant-jobs?src=popular_roles_homepage_srch
+            - paragraph [ref=f2e627]:
+              - text: 968 Jobs
+              - img "arrow-icon" [ref=f2e628]
+    - generic [ref=f2e634]:
+      - heading "Sponsored companies" [level=2] [ref=f2e635]
+      - generic [ref=f2e636]:
+        - generic [ref=f2e637]:
+          - generic [ref=f2e638] [cursor=pointer]: All
+          - generic [ref=f2e639] [cursor=pointer]: IT Services
+          - generic [ref=f2e640] [cursor=pointer]: Technology
+          - generic [ref=f2e641] [cursor=pointer]: Healthcare & Life Sciences
+          - generic [ref=f2e642] [cursor=pointer]: Manufacturing & Production
+          - generic [ref=f2e643] [cursor=pointer]: Infrastructure, Transport & Real Estate
+          - generic [ref=f2e644] [cursor=pointer]: BFSI
+          - generic [ref=f2e645] [cursor=pointer]: BPM
+          - generic [ref=f2e646] [cursor=pointer]: Consumer, Retail & Hospitality
+          - generic [ref=f2e647] [cursor=pointer]: Media, Entertainment & Telecom
+          - generic [ref=f2e648] [cursor=pointer]: Education
+          - generic [ref=f2e649] [cursor=pointer]: Professional Services
+        - generic [ref=f2e650] [cursor=pointer]: +4 more
+      - generic [ref=f2e653]:
+        - generic [ref=f2e654]:
+          - generic [ref=f2e655] [cursor=pointer]:
+            - img "Cotiviti" [ref=f2e657]
+            - generic [ref=f2e658]:
+              - heading "Cotiviti" [level=3] [ref=f2e659]:
+                - link "Cotiviti" [ref=f2e660]:
+                  - /url: https://www.naukri.com/cotiviti-overview-4422258?src=standardLogo
+              - generic [ref=f2e661]:
+                - img "rating" [ref=f2e663]
+                - generic [ref=f2e664]: "3.5"
+                - generic [ref=f2e665]: 724 reviews
+              - generic [ref=f2e666]:
+                - generic [ref=f2e667]: Private
+                - generic [ref=f2e668]: IT Services & Consulting
+                - generic [ref=f2e669]: Highly Rated by Women
+                - generic [ref=f2e670]: Foreign MNC
+                - generic [ref=f2e671]: B2B
+          - generic [ref=f2e672] [cursor=pointer]:
+            - img "ZS" [ref=f2e674]
+            - generic [ref=f2e675]:
+              - heading "ZS" [level=3] [ref=f2e676]:
+                - link "ZS" [ref=f2e677]:
+                  - /url: https://www.naukri.com/zs-overview-1595582?src=standardLogo
+              - generic [ref=f2e678]:
+                - img "rating" [ref=f2e680]
+                - generic [ref=f2e681]: "3.0"
+                - generic [ref=f2e682]: 2.8K+ reviews
+              - generic [ref=f2e683]:
+                - generic [ref=f2e684]: Consulting
+                - generic [ref=f2e685]: Emerging Technologies
+                - generic [ref=f2e686]: Management Consulting
+                - generic [ref=f2e687]: Foreign MNC
+                - generic [ref=f2e688]: B2B
+        - generic [ref=f2e689]:
+          - generic [ref=f2e690] [cursor=pointer]:
+            - img "Trellix" [ref=f2e692]
+            - generic [ref=f2e693]:
+              - heading "Trellix" [level=3] [ref=f2e694]:
+                - link "Trellix" [ref=f2e695]:
+                  - /url: https://www.naukri.com/trellix-overview-7021493?src=standardLogo
+              - generic [ref=f2e696]:
+                - img "rating" [ref=f2e698]
+                - generic [ref=f2e699]: "3.5"
+                - generic [ref=f2e700]: 183 reviews
+              - generic [ref=f2e701]:
+                - generic [ref=f2e702]: Software Product
+                - generic [ref=f2e703]: Foreign MNC
+          - generic [ref=f2e704] [cursor=pointer]:
+            - img "Boeing" [ref=f2e706]
+            - generic [ref=f2e707]:
+              - heading "Boeing" [level=3] [ref=f2e708]:
+                - link "Boeing" [ref=f2e709]:
+                  - /url: https://www.naukri.com/boeing-overview-97322?src=standardLogo
+              - generic [ref=f2e710]:
+                - img "rating" [ref=f2e712]
+                - generic [ref=f2e713]: "3.8"
+                - generic [ref=f2e714]: 755 reviews
+              - generic [ref=f2e715]:
+                - generic [ref=f2e716]: Forbes Global 2000
+                - generic [ref=f2e717]: Fortune Global 500
+                - generic [ref=f2e718]: Aviation
+                - generic [ref=f2e719]: Public
+                - generic [ref=f2e720]: Highly Rated by Women
+        - generic [ref=f2e721]:
+          - generic [ref=f2e722] [cursor=pointer]:
+            - img "ORA Group" [ref=f2e724]
+            - generic [ref=f2e725]:
+              - heading "ORA Group" [level=3] [ref=f2e726]:
+                - link "ORA Group" [ref=f2e727]:
+                  - /url: https://www.naukri.com/ora-group-overview-4616223?src=standardLogo
+              - generic [ref=f2e728]:
+                - img "rating" [ref=f2e730]
+                - generic [ref=f2e731]: "4.0"
+                - generic [ref=f2e732]: 12 reviews
+              - generic [ref=f2e733]:
+                - generic [ref=f2e734]: Real Estate
+                - generic [ref=f2e735]: Engineering & Construction
+                - generic [ref=f2e736]: Corporate
+                - generic [ref=f2e737]: B2C
+                - generic [ref=f2e738]: Private
+          - generic [ref=f2e739] [cursor=pointer]:
+            - img "Abbott" [ref=f2e741]
+            - generic [ref=f2e742]:
+              - heading "Abbott" [level=3] [ref=f2e743]:
+                - link "Abbott" [ref=f2e744]:
+                  - /url: https://www.naukri.com/abbott-overview-434716?src=standardLogo
+              - generic [ref=f2e745]:
+                - img "rating" [ref=f2e747]
+                - generic [ref=f2e748]: "4.1"
+                - generic [ref=f2e749]: 3.7K+ reviews
+              - generic [ref=f2e750]:
+                - generic [ref=f2e751]: Fortune500
+                - generic [ref=f2e752]: B2C
+                - generic [ref=f2e753]: Forbes Global 2000
+                - generic [ref=f2e754]: Pharmaceutical & Life Sciences
+                - generic [ref=f2e755]: Fortune Global 500
+        - generic [ref=f2e756]:
+          - generic [ref=f2e757] [cursor=pointer]:
+            - img "Pharmed" [ref=f2e759]
+            - generic [ref=f2e760]:
+              - heading "Pharmed" [level=3] [ref=f2e761]:
+                - link "Pharmed" [ref=f2e762]:
+                  - /url: https://www.naukri.com/pharmed-overview-20580?src=standardLogo
+              - generic [ref=f2e763]:
+                - img "rating" [ref=f2e765]
+                - generic [ref=f2e766]: "4.7"
+                - generic [ref=f2e767]: 353 reviews
+              - generic [ref=f2e768]:
+                - generic [ref=f2e769]: Pharmaceutical & Life Sciences
+                - generic [ref=f2e770]: Corporate
+                - generic [ref=f2e771]: B2B
+                - generic [ref=f2e772]: B2C
+                - generic [ref=f2e773]: Limited
+          - generic [ref=f2e774] [cursor=pointer]:
+            - img "PACCAR" [ref=f2e776]
+            - generic [ref=f2e777]:
+              - heading "PACCAR" [level=3] [ref=f2e778]:
+                - link "PACCAR" [ref=f2e779]:
+                  - /url: https://www.naukri.com/paccar-overview-2639126?src=standardLogo
+              - generic [ref=f2e780]:
+                - img "rating" [ref=f2e782]
+                - generic [ref=f2e783]: "2.9"
+                - generic [ref=f2e784]: 57 reviews
+              - generic [ref=f2e785]:
+                - generic [ref=f2e786]: Industrial Equipment / Machinery
+                - generic [ref=f2e787]: Urban Transport
+                - generic [ref=f2e788]: Fortune Global 500
+                - generic [ref=f2e789]: Foreign MNC
+                - generic [ref=f2e790]: Forbes Global 2000
+        - generic [ref=f2e791]:
+          - generic [ref=f2e792] [cursor=pointer]:
+            - img "Megha Engineering and Infrastructure" [ref=f2e794]
+            - generic [ref=f2e795]:
+              - heading "Megha Engineering and Infrastructure" [level=3] [ref=f2e796]:
+                - link "Megha Engineering and Infrastructure" [ref=f2e797]:
+                  - /url: https://www.naukri.com/megha-engineering-and-infrastructure-overview-4655747?src=standardLogo
+              - generic [ref=f2e798]:
+                - img "rating" [ref=f2e800]
+                - generic [ref=f2e801]: "3.9"
+                - generic [ref=f2e802]: 7.1K+ reviews
+              - generic [ref=f2e803]:
+                - generic [ref=f2e804]: Engineering & Construction
+                - generic [ref=f2e805]: Corporate
+                - generic [ref=f2e806]: B2B
+                - generic [ref=f2e807]: Product
+                - generic [ref=f2e808]: Conglomerate
+          - generic [ref=f2e809] [cursor=pointer]:
+            - img "Commonwealth Bank of Australia, India" [ref=f2e811]
+            - generic [ref=f2e812]:
+              - heading "Commonwealth Bank of Australia, India" [level=3] [ref=f2e813]:
+                - link "Commonwealth Bank of Australia, India" [ref=f2e814]:
+                  - /url: https://www.naukri.com/commonwealth-bank-of-australia-india-overview-84282?src=standardLogo
+              - generic [ref=f2e815]:
+                - img "rating" [ref=f2e817]
+                - generic [ref=f2e818]: "2.7"
+                - generic [ref=f2e819]: 950 reviews
+              - generic [ref=f2e820]:
+                - generic [ref=f2e821]: Private
+                - generic [ref=f2e822]: Startup
+                - generic [ref=f2e823]: Forbes Global 2000
+                - generic [ref=f2e824]: Fortune Global 500
+                - generic [ref=f2e825]: Financial Services
+        - generic [ref=f2e826]:
+          - generic [ref=f2e827] [cursor=pointer]:
+            - img "Perforce" [ref=f2e829]
+            - generic [ref=f2e830]:
+              - heading "Perforce" [level=3] [ref=f2e831]:
+                - link "Perforce" [ref=f2e832]:
+                  - /url: https://www.naukri.com/perforce-overview-5206384?src=standardLogo
+              - generic [ref=f2e833]:
+                - img "rating" [ref=f2e835]
+                - generic [ref=f2e836]: "3.9"
+                - generic [ref=f2e837]: 29 reviews
+              - generic [ref=f2e838]:
+                - generic [ref=f2e839]: Product
+                - generic [ref=f2e840]: R&D/Development Center
+                - generic [ref=f2e841]: SaaS
+                - generic [ref=f2e842]: Internet
+                - generic [ref=f2e843]: Software Product
+          - generic [ref=f2e844] [cursor=pointer]:
+            - img "Bounteous x Accolite" [ref=f2e846]
+            - generic [ref=f2e847]:
+              - heading "Bounteous x Accolite" [level=3] [ref=f2e848]:
+                - link "Bounteous x Accolite" [ref=f2e849]:
+                  - /url: https://www.naukri.com/bounteous-x-accolite-overview-4577755?src=standardLogo
+              - generic [ref=f2e850]:
+                - generic [ref=f2e851]: Private
+                - generic [ref=f2e852]: B2B
+                - generic [ref=f2e853]: Foreign MNC
+                - generic [ref=f2e854]: Highly Rated by Women
+                - generic [ref=f2e855]: IT Services & Consulting
+        - generic [ref=f2e856]:
+          - generic [ref=f2e857] [cursor=pointer]:
+            - img "Shahi" [ref=f2e859]
+            - generic [ref=f2e860]:
+              - heading "Shahi" [level=3] [ref=f2e861]:
+                - link "Shahi" [ref=f2e862]:
+                  - /url: https://www.naukri.com/shahi-overview-219216?src=standardLogo
+              - generic [ref=f2e863]:
+                - img "rating" [ref=f2e865]
+                - generic [ref=f2e866]: "3.9"
+                - generic [ref=f2e867]: 2.2K+ reviews
+              - generic [ref=f2e868]:
+                - generic [ref=f2e869]: Import & Export
+                - generic [ref=f2e870]: Textile & Apparel
+                - generic [ref=f2e871]: B2B
+                - generic [ref=f2e872]: Highly Rated by Women
+                - generic [ref=f2e873]: Corporate
+          - generic [ref=f2e874] [cursor=pointer]:
+            - img "ARi Global" [ref=f2e876]
+            - generic [ref=f2e877]:
+              - heading "ARi Global" [level=3] [ref=f2e878]:
+                - link "ARi Global" [ref=f2e879]:
+                  - /url: https://www.naukri.com/ari-global-overview-4577225?src=standardLogo
+              - generic [ref=f2e880]:
+                - img "rating" [ref=f2e882]
+                - generic [ref=f2e883]: "3.4"
+                - generic [ref=f2e884]: 312 reviews
+              - generic [ref=f2e885]:
+                - generic [ref=f2e886]: B2B
+                - generic [ref=f2e887]: Corporate
+                - generic [ref=f2e888]: Private
+                - generic [ref=f2e889]: Industrial Automation
+        - generic [ref=f2e890]:
+          - generic [ref=f2e891] [cursor=pointer]:
+            - img "Thomson Reuters" [ref=f2e893]
+            - generic [ref=f2e894]:
+              - heading "Thomson Reuters" [level=3] [ref=f2e895]:
+                - link "Thomson Reuters" [ref=f2e896]:
+                  - /url: https://www.naukri.com/thomson-reuters-overview-52806?src=standardLogo
+              - generic [ref=f2e897]:
+                - img "rating" [ref=f2e899]
+                - generic [ref=f2e900]: "3.7"
+                - generic [ref=f2e901]: 1.9K+ reviews
+              - generic [ref=f2e902]:
+                - generic [ref=f2e903]: Conglomerate
+                - generic [ref=f2e904]: Forbes Global 2000
+                - generic [ref=f2e905]: Highly Rated by Women
+                - generic [ref=f2e906]: BPM / BPO
+                - generic [ref=f2e907]: Software Product
+          - generic [ref=f2e908] [cursor=pointer]:
+            - img "Britannia" [ref=f2e910]
+            - generic [ref=f2e911]:
+              - heading "Britannia" [level=3] [ref=f2e912]:
+                - link "Britannia" [ref=f2e913]:
+                  - /url: https://www.naukri.com/britannia-overview-68924?src=standardLogo
+              - generic [ref=f2e914]:
+                - img "rating" [ref=f2e916]
+                - generic [ref=f2e917]: "4.0"
+                - generic [ref=f2e918]: 2.9K+ reviews
+              - generic [ref=f2e919]:
+                - generic [ref=f2e920]: Conglomerate
+                - generic [ref=f2e921]: B2B
+                - generic [ref=f2e922]: Corporate
+                - generic [ref=f2e923]: FMCG
+                - generic [ref=f2e924]: Fortune India 500
+        - generic [ref=f2e925]:
+          - generic [ref=f2e926] [cursor=pointer]:
+            - img "Nihilent" [ref=f2e928]
+            - generic [ref=f2e929]:
+              - heading "Nihilent" [level=3] [ref=f2e930]:
+                - link "Nihilent" [ref=f2e931]:
+                  - /url: https://www.naukri.com/nihilent-overview-675066?src=standardLogo
+              - generic [ref=f2e932]:
+                - img "rating" [ref=f2e934]
+                - generic [ref=f2e935]: "3.2"
+                - generic [ref=f2e936]: 673 reviews
+              - generic [ref=f2e937]:
+                - generic [ref=f2e938]: Analytics / KPO / Research
+                - generic [ref=f2e939]: IT Services & Consulting
+                - generic [ref=f2e940]: Indian MNC
+                - generic [ref=f2e941]: Private
+                - generic [ref=f2e942]: Service
+          - generic [ref=f2e943] [cursor=pointer]:
+            - img "DTCC" [ref=f2e945]
+            - generic [ref=f2e946]:
+              - heading "DTCC" [level=3] [ref=f2e947]:
+                - link "DTCC" [ref=f2e948]:
+                  - /url: https://www.naukri.com/dtcc-overview-383748?src=standardLogo
+              - generic [ref=f2e949]:
+                - img "rating" [ref=f2e951]
+                - generic [ref=f2e952]: "3.6"
+                - generic [ref=f2e953]: 115 reviews
+              - generic [ref=f2e954]:
+                - generic [ref=f2e955]: Private
+                - generic [ref=f2e956]: B2B
+                - generic [ref=f2e957]: Foreign MNC
+                - generic [ref=f2e958]: Financial Services
+        - generic [ref=f2e959]:
+          - generic [ref=f2e960] [cursor=pointer]:
+            - img "Omnicom Global Solutions" [ref=f2e962]
+            - generic [ref=f2e963]:
+              - heading "Omnicom Global Solutions" [level=3] [ref=f2e964]:
+                - link "Omnicom Global Solutions" [ref=f2e965]:
+                  - /url: https://www.naukri.com/omnicom-global-solutions-overview-3113322?src=standardLogo
+              - generic [ref=f2e966]:
+                - img "rating" [ref=f2e968]
+                - generic [ref=f2e969]: "3.3"
+                - generic [ref=f2e970]: 382 reviews
+              - generic [ref=f2e971]:
+                - generic [ref=f2e972]: Advertising & Marketing
+                - generic [ref=f2e973]: Corporate
+                - generic [ref=f2e974]: B2B
+                - generic [ref=f2e975]: Private
+          - generic [ref=f2e976] [cursor=pointer]:
+            - img "Dr Reddys" [ref=f2e978]
+            - generic [ref=f2e979]:
+              - heading "Dr Reddys" [level=3] [ref=f2e980]:
+                - link "Dr Reddys" [ref=f2e981]:
+                  - /url: https://www.naukri.com/dr-reddys-overview-4902267?src=standardLogo
+              - generic [ref=f2e982]:
+                - img "rating" [ref=f2e984]
+                - generic [ref=f2e985]: "4.0"
+                - generic [ref=f2e986]: 8.4K+ reviews
+              - generic [ref=f2e987]:
+                - generic [ref=f2e988]: Clinical Research / Contract Research
+                - generic [ref=f2e989]: Pharmaceutical & Life Sciences
+                - generic [ref=f2e990]: Highly Rated by Women
+                - generic [ref=f2e991]: Indian MNC
+                - generic [ref=f2e992]: Public
+        - generic [ref=f2e993]:
+          - generic [ref=f2e994] [cursor=pointer]:
+            - img "Merit Data and Technology" [ref=f2e996]
+            - generic [ref=f2e997]:
+              - heading "Merit Data and Technology" [level=3] [ref=f2e998]:
+                - link "Merit Data and Technology" [ref=f2e999]:
+                  - /url: https://www.naukri.com/merit-data-and-technology-overview-6992823?src=standardLogo
+              - generic [ref=f2e1000]:
+                - img "rating" [ref=f2e1002]
+                - generic [ref=f2e1003]: "3.7"
+                - generic [ref=f2e1004]: 343 reviews
+              - generic [ref=f2e1005]:
+                - generic [ref=f2e1006]: Analytics / KPO / Research
+                - generic [ref=f2e1007]: B2B
+                - generic [ref=f2e1008]: e-Learning / EdTech
+                - generic [ref=f2e1009]: Software Product
+                - generic [ref=f2e1010]: IT Services & Consulting
+          - generic [ref=f2e1011] [cursor=pointer]:
+            - img "Alithya" [ref=f2e1013]
+            - generic [ref=f2e1014]:
+              - heading "Alithya" [level=3] [ref=f2e1015]:
+                - link "Alithya" [ref=f2e1016]:
+                  - /url: https://www.naukri.com/alithya-overview-10484136?src=standardLogo
+              - generic [ref=f2e1017]:
+                - img "rating" [ref=f2e1019]
+                - generic [ref=f2e1020]: "4.7"
+                - generic [ref=f2e1021]: 4 reviews
+              - generic [ref=f2e1023]: IT Services & Consulting
+        - generic [ref=f2e1024]:
+          - generic [ref=f2e1025] [cursor=pointer]:
+            - img "OSP India" [ref=f2e1027]
+            - generic [ref=f2e1028]:
+              - heading "OSP India" [level=3] [ref=f2e1029]:
+                - link "OSP India" [ref=f2e1030]:
+                  - /url: https://www.naukri.com/osp-india-overview-11318144?src=standardLogo
+              - generic [ref=f2e1031]:
+                - img "rating" [ref=f2e1033]
+                - generic [ref=f2e1034]: "4.9"
+                - generic [ref=f2e1035]: 9 reviews
+              - generic [ref=f2e1036]:
+                - generic [ref=f2e1037]: IT Services & Consulting
+                - generic [ref=f2e1038]: Corporate
+          - generic [ref=f2e1039] [cursor=pointer]:
+            - img "Infineon" [ref=f2e1041]
+            - generic [ref=f2e1042]:
+              - heading "Infineon" [level=3] [ref=f2e1043]:
+                - link "Infineon" [ref=f2e1044]:
+                  - /url: https://www.naukri.com/infineon-overview-587312?src=standardLogo
+              - generic [ref=f2e1045]:
+                - img "rating" [ref=f2e1047]
+                - generic [ref=f2e1048]: "3.6"
+                - generic [ref=f2e1049]: 289 reviews
+              - generic [ref=f2e1050]:
+                - generic [ref=f2e1051]: Product
+                - generic [ref=f2e1052]: Internet
+                - generic [ref=f2e1053]: Hardware & Networking
+                - generic [ref=f2e1054]: Software Product
+                - generic [ref=f2e1055]: Electronic Components / Semiconductors
+      - link "View all companies" [ref=f2e1058] [cursor=pointer]:
+        - /url: https://www.naukri.com/allcompanies?searchType=standardLogo&title=Sponsored+companies&branding=%257B%2522pagename%2522%253A%2522ni-desktop-standard-viewAll%2522%257D&pageNo=1&qcount=47
+    - generic [ref=f2e1063]:
+      - generic [ref=f2e1064]:
+        - generic [ref=f2e1065]: by AmbitionBox
+        - img "naukri ab interview" [ref=f2e1067]
+        - heading "Prepare for your next interview" [level=3] [ref=f2e1068]
+      - generic [ref=f2e1069]:
+        - paragraph [ref=f2e1070]: Interview questions by company
+        - generic [ref=f2e1071] [cursor=pointer]:
+          - img "naulogo" [ref=f2e1073]
+          - generic [ref=f2e1074]:
+            - link "TCS" [ref=f2e1076]:
+              - /url: https://www.ambitionbox.com/interviews/tcs-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1077]: 2.5K+ Interviews
+          - img "arrow-icon" [ref=f2e1078]
+        - generic [ref=f2e1079] [cursor=pointer]:
+          - img "naulogo" [ref=f2e1081]
+          - generic [ref=f2e1082]:
+            - link "Amazon" [ref=f2e1084]:
+              - /url: https://www.ambitionbox.com/interviews/amazon-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1085]: 1.7K+ Interviews
+          - img "arrow-icon" [ref=f2e1086]
+        - generic [ref=f2e1087] [cursor=pointer]:
+          - img "naulogo" [ref=f2e1089]
+          - generic [ref=f2e1090]:
+            - link "Flipkart" [ref=f2e1092]:
+              - /url: https://www.ambitionbox.com/interviews/flipkart-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1093]: 488 Interviews
+          - img "arrow-icon" [ref=f2e1094]
+        - generic [ref=f2e1095] [cursor=pointer]:
+          - img "naulogo" [ref=f2e1097]
+          - generic [ref=f2e1098]:
+            - link "Accenture" [ref=f2e1100]:
+              - /url: https://www.ambitionbox.com/interviews/accenture-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1101]: 2K+ Interviews
+          - img "arrow-icon" [ref=f2e1102]
+        - generic [ref=f2e1103] [cursor=pointer]:
+          - img "naulogo" [ref=f2e1105]
+          - generic [ref=f2e1106]:
+            - link "Byjus" [ref=f2e1108]:
+              - /url: https://www.ambitionbox.com/interviews/byjus-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1109]: 816 Interviews
+          - img "arrow-icon" [ref=f2e1110]
+        - generic [ref=f2e1111] [cursor=pointer]:
+          - img "naulogo" [ref=f2e1113]
+          - generic [ref=f2e1114]:
+            - link "Cognizant" [ref=f2e1116]:
+              - /url: https://www.ambitionbox.com/interviews/cognizant-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1117]: 1.6K+ Interviews
+          - img "arrow-icon" [ref=f2e1118]
+        - generic [ref=f2e1119]:
+          - link "View all companies" [ref=f2e1120] [cursor=pointer]:
+            - /url: https://www.ambitionbox.com/interviews?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+          - img "arrow-icon" [ref=f2e1121]
+      - generic [ref=f2e1122]:
+        - paragraph [ref=f2e1123]: Interview questions by role
+        - generic [ref=f2e1124]:
+          - generic [ref=f2e1125]:
+            - link "Software Engineer" [ref=f2e1126] [cursor=pointer]:
+              - /url: https://www.ambitionbox.com/profiles/software-engineer/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1127]: (7.2K+ questions)
+          - separator [ref=f2e1128]
+        - generic [ref=f2e1129]:
+          - generic [ref=f2e1130]:
+            - link "Business Analyst" [ref=f2e1131] [cursor=pointer]:
+              - /url: https://www.ambitionbox.com/profiles/business-analyst/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1132]: (2.8K+ questions)
+          - separator [ref=f2e1133]
+        - generic [ref=f2e1134]:
+          - generic [ref=f2e1135]:
+            - link "Consultant" [ref=f2e1136] [cursor=pointer]:
+              - /url: https://www.ambitionbox.com/profiles/consultant/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1137]: (2.4K+ questions)
+          - separator [ref=f2e1138]
+        - generic [ref=f2e1139]:
+          - generic [ref=f2e1140]:
+            - link "Financial Analyst" [ref=f2e1141] [cursor=pointer]:
+              - /url: https://www.ambitionbox.com/profiles/financial-analyst/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1142]: (894 questions)
+          - separator [ref=f2e1143]
+        - generic [ref=f2e1144]:
+          - generic [ref=f2e1145]:
+            - link "Sales & Marketing" [ref=f2e1146] [cursor=pointer]:
+              - /url: https://www.ambitionbox.com/profiles/sales-and-marketing/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+            - paragraph [ref=f2e1147]: (991 questions)
+          - separator [ref=f2e1148]
+        - generic [ref=f2e1150]:
+          - link "Quality Engineer" [ref=f2e1151] [cursor=pointer]:
+            - /url: https://www.ambitionbox.com/profiles/quality-engineer/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+          - paragraph [ref=f2e1152]: (1.3K+ questions)
+        - generic [ref=f2e1153]:
+          - link "View all roles" [ref=f2e1154] [cursor=pointer]:
+            - /url: https://www.ambitionbox.com/interviews/profiles?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+          - img "arrow-icon" [ref=f2e1155]
+    - generic [ref=f2e1160]:
+      - img "Fast forward naukri services" [ref=f2e1162]
+      - generic [ref=f2e1163]:
+        - heading "Accelerate your job search with premium services" [level=3] [ref=f2e1164]
+        - paragraph [ref=f2e1165]: "Services to help you get hired, faster: from preparing your CV, getting recruiter attention, finding the right jobs, and more!"
+        - generic [ref=f2e1166]:
+          - link "button-icon Resume writing arrow-icon" [ref=f2e1167] [cursor=pointer]:
+            - /url: https://resume.naukri.com/mid-level-experienced-professionals-resume-writing?fftid=LoggedOutHomePage
+            - img "button-icon" [ref=f2e1168]
+            - generic [ref=f2e1169]: Resume writing
+            - img "arrow-icon" [ref=f2e1170]
+          - link "button-icon Priority applicant arrow-icon" [ref=f2e1171] [cursor=pointer]:
+            - /url: https://resume.naukri.com/priority-job-application?fftid=LoggedoutHomePage
+            - img "button-icon" [ref=f2e1172]
+            - generic [ref=f2e1173]: Priority applicant
+            - img "arrow-icon" [ref=f2e1174]
+          - link "button-icon Resume display arrow-icon" [ref=f2e1175] [cursor=pointer]:
+            - /url: https://resume.naukri.com/resume-display?fftid=LoggedOutHomePage
+            - img "button-icon" [ref=f2e1176]
+            - generic [ref=f2e1177]: Resume display
+            - img "arrow-icon" [ref=f2e1178]
+      - generic [ref=f2e1179]:
+        - generic [ref=f2e1180]: by Naukri Fastforward
+        - link "Learn more" [ref=f2e1181] [cursor=pointer]:
+          - /url: https://resume.naukri.com/?fftid=LoggedOutHomePage
+        - paragraph [ref=f2e1182]: Includes paid services
+    - generic [ref=f2e1184]:
+      - generic [ref=f2e1185]:
+        - generic [ref=f2e1186]:
+          - heading "10M+ users are on the Naukri app" [level=3] [ref=f2e1187]
+          - paragraph [ref=f2e1188]: Get real-time job updates & more!
+        - generic [ref=f2e1189]:
+          - textbox "Enter mobile number..." [ref=f2e1191]
+          - button "Get link" [ref=f2e1192] [cursor=pointer]
+        - generic [ref=f2e1194]:
+          - link "Google Play" [ref=f2e1195] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=naukriApp.appModules.login&hl=en_IN&utm_source=desktop_homepage&utm_campaign=widget
+            - img "Google Play" [ref=f2e1196]
+          - link "App Store" [ref=f2e1197] [cursor=pointer]:
+            - /url: https://apps.apple.com/in/app/naukri-com-job-search/id482877505?utm_source=desktop_homepage&utm_campaign=widget
+            - img "App Store" [ref=f2e1198]
+      - generic [ref=f2e1200]:
+        - img [ref=f2e1201]
+        - paragraph [ref=f2e1202]: Scan to download
+      - img [ref=f2e1204]
+  - contentinfo [ref=f2e1205]:
+    - generic [ref=f2e1208]:
+      - generic [ref=f2e1209]:
+        - link "Naukri Logo" [ref=f2e1210] [cursor=pointer]:
+          - /url: https://www.naukri.com
+          - img "Naukri Logo" [ref=f2e1211]
+        - generic [ref=f2e1212]:
+          - generic "Connect with us" [ref=f2e1213]
+          - link "naukri social icons" [ref=f2e1214] [cursor=pointer]:
+            - /url: https://www.facebook.com/Naukri
+            - img "naukri social icons" [ref=f2e1215]
+          - link "naukri social icons" [ref=f2e1216] [cursor=pointer]:
+            - /url: https://instagram.com/naukridotcom/
+            - img "naukri social icons" [ref=f2e1217]
+          - link "naukri social icons" [ref=f2e1218] [cursor=pointer]:
+            - /url: https://twitter.com/naukri
+            - img "naukri social icons" [ref=f2e1219]
+          - link "naukri social icons" [ref=f2e1220] [cursor=pointer]:
+            - /url: http://www.linkedin.com/company/naukri.com
+            - img "naukri social icons" [ref=f2e1221]
+      - list [ref=f2e1223]:
+        - listitem [ref=f2e1224]:
+          - link "About us" [ref=f2e1225] [cursor=pointer]:
+            - /url: https://infoedge.in
+        - listitem [ref=f2e1226]:
+          - link "Careers" [ref=f2e1227] [cursor=pointer]:
+            - /url: https://careers.infoedge.com/
+        - listitem [ref=f2e1228]:
+          - link "Employer home" [ref=f2e1229] [cursor=pointer]:
+            - /url: https://www.naukri.com/recruit/login
+        - listitem [ref=f2e1230]:
+          - link "Sitemap" [ref=f2e1231] [cursor=pointer]:
+            - /url: https://www.naukri.com/sitemap/sitemap.php
+        - listitem [ref=f2e1232]:
+          - link "Credits" [ref=f2e1233] [cursor=pointer]:
+            - /url: https://www.naukri.com/credits
+      - list [ref=f2e1235]:
+        - listitem [ref=f2e1236]:
+          - link "Help center" [ref=f2e1237] [cursor=pointer]:
+            - /url: https://www.naukri.com/faq/job-seeker?utm_source=footer
+        - listitem [ref=f2e1238]:
+          - link "Summons/Notices" [ref=f2e1239] [cursor=pointer]:
+            - /url: https://w5.naukri.com/summons-notices-form/
+        - listitem [ref=f2e1240]:
+          - link "Grievances" [ref=f2e1241] [cursor=pointer]:
+            - /url: https://w5.naukri.com/grievances-form/
+        - listitem [ref=f2e1242]:
+          - link "Report issue" [ref=f2e1243] [cursor=pointer]:
+            - /url: https://w5.naukri.com/fdbck/main/feedback.php?app_id=15
+      - list [ref=f2e1245]:
+        - listitem [ref=f2e1246]:
+          - link "Privacy policy" [ref=f2e1247] [cursor=pointer]:
+            - /url: https://www.naukri.com/privacypolicy
+        - listitem [ref=f2e1248]:
+          - link "Terms & conditions" [ref=f2e1249] [cursor=pointer]:
+            - /url: https://www.naukri.com/termsconditions
+        - listitem [ref=f2e1250]:
+          - link "Fraud alert" [ref=f2e1251] [cursor=pointer]:
+            - /url: https://www.naukri.com/imposter/report-fake-job-recruiter
+        - listitem [ref=f2e1252]:
+          - link "Trust & safety" [ref=f2e1253] [cursor=pointer]:
+            - /url: https://www.naukri.com/jobsearch/trust-safety
+      - generic [ref=f2e1254]:
+        - generic [ref=f2e1255]: Apply on the go
+        - generic [ref=f2e1256]: Get real-time job updates on our App
+        - generic [ref=f2e1257]:
+          - link "naukri app download" [ref=f2e1258] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=naukriApp.appModules.login&hl=en&utm_source=naukri&utm_medium=footer
+            - img "naukri app download" [ref=f2e1259]
+          - link "naukri app download" [ref=f2e1260] [cursor=pointer]:
+            - /url: https://itunes.apple.com/in/app/naukri.com-job-search/id482877505?mt=8
+            - img "naukri app download" [ref=f2e1261]
+    - generic [ref=f2e1263]:
+      - generic [ref=f2e1264]:
+        - link "naukri social logos" [ref=f2e1266] [cursor=pointer]:
+          - /url: http://infoedge.in
+          - img "naukri social logos" [ref=f2e1267]
+        - generic [ref=f2e1268]:
+          - generic [ref=f2e1269]: All trademarks are the property of their respective owners
+          - generic [ref=f2e1270]: All rights reserved © 2026 Info Edge (India) Ltd.
+      - generic [ref=f2e1271]: Our businesses
+      - list [ref=f2e1274]:
+        - listitem [ref=f2e1275]:
+          - link "nnacres" [ref=f2e1277] [cursor=pointer]:
+            - /url: https://www.99acres.com/
+            - img "nnacres" [ref=f2e1278]
+        - listitem [ref=f2e1279]:
+          - link "jeevansathi" [ref=f2e1281] [cursor=pointer]:
+            - /url: https://www.jeevansathi.com/
+            - img "jeevansathi" [ref=f2e1282]
+        - listitem [ref=f2e1283]:
+          - link "ng" [ref=f2e1285] [cursor=pointer]:
+            - /url: https://www.naukrigulf.com/
+            - img "ng" [ref=f2e1286]
+        - listitem [ref=f2e1287]:
+          - link "shiksha" [ref=f2e1289] [cursor=pointer]:
+            - /url: https://www.shiksha.com/
+            - img "shiksha" [ref=f2e1290]
+        - listitem [ref=f2e1291]:
+          - link "iimjobs" [ref=f2e1293] [cursor=pointer]:
+            - /url: https://www.iimjobs.com
+            - img "iimjobs" [ref=f2e1294]
+        - listitem [ref=f2e1295]:
+          - link "hirist" [ref=f2e1297] [cursor=pointer]:
+            - /url: https://www.hirist.tech/
+            - img "hirist" [ref=f2e1298]
+        - listitem [ref=f2e1299]:
+          - link "jobhai" [ref=f2e1301] [cursor=pointer]:
+            - /url: https://www.jobhai.com
+            - img "jobhai" [ref=f2e1302]
+        - listitem [ref=f2e1303]:
+          - link "doselect" [ref=f2e1305] [cursor=pointer]:
+            - /url: https://doselect.com/
+            - img "doselect" [ref=f2e1306]
+        - listitem [ref=f2e1307]:
+          - link "minis" [ref=f2e1309] [cursor=pointer]:
+            - /url: https://www.naukri.com/minis
+            - img "minis" [ref=f2e1310]
+        - listitem [ref=f2e1311]:
+          - link "codingninjas" [ref=f2e1313] [cursor=pointer]:
+            - /url: https://www.codingninjas.com/?utm_source=naukri&utm_medium=desktop-footer
+            - img "codingninjas" [ref=f2e1314]
+  - status
