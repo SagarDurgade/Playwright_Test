@@ -2,7 +2,7 @@
 import { BasePage, expect } from "./BasePage"
 
 export class DuckduckgoPage extends BasePage {
-    searchInput = this.page.locator('input[name="q"]')
+    searchInput = this.page.getByRole('textbox', { name: 'Search with DuckDuckGo' })
     searchButton = this.page.getByRole('button', { name: 'Search', exact: true })
     searchResult = (id: string) => this.page.locator(`//*[contains(text(),"${id}")]`)
     downloadBrowserButton = this.page.locator('//*[text()="Download DuckDuckGo Browser"]')
@@ -13,12 +13,12 @@ export class DuckduckgoPage extends BasePage {
         await this.page.keyboard.press('Enter')
         await this.page.waitForLoadState('networkidle')
     }
-    
+
     async verifySearchResult(text: string) {
         await expect(this.searchError).not.toBeVisible({ timeout: 5000 })
         await expect(this.searchResult(text)).toBeVisible({ timeout: 10000 })
     }
-    
+
     async selectSearchResult(text: string) {
         await this.searchResult(text).click()
     }
