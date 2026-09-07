@@ -3,7 +3,6 @@ import { GooglePage } from './GooglePage'
 import { DuckduckgoPage } from './DuckduckgoPage'
 import { MakemytripPage } from './MakemytripPage'
 import { amazonPage } from './amazonPage'
-import { amazonNewPage } from './amazonNewPage'
 
 
 export const createPages = (page: Page) => {
@@ -12,6 +11,5 @@ export const createPages = (page: Page) => {
         duckduckgo: new DuckduckgoPage(page),
         makemytrip: new MakemytripPage(page),
         amazon: new amazonPage(page),
-        amazonNewPage: new amazonNewPage(page)
     }
 }

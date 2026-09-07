@@ -1,7 +1,7 @@
 import { BasePage, expect } from "./BasePage"
 
 export class DuckduckgoPage extends BasePage {
-    searchInput = this.page.getByRole('textbox', { name: 'Search with DuckDuckGo' })
+    searchInput = this.page.getByRole('combobox', { name: 'Search with DuckDuckGo' })
     searchButton = this.page.getByRole('button', { name: 'Search', exact: true })
     searchResult = (id: string) => this.page.locator(`//*[contains(text(),"${id}")]`)
     downloadBrowserButton = this.page.locator('//*[text()="Download DuckDuckGo Browser"]')
