@@ -1,4 +1,3 @@
-
 import { BasePage, expect } from "./BasePage"
 
 export class DuckduckgoPage extends BasePage {
