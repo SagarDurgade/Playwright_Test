@@ -1,47 +1,34 @@
-import { test, expect, chromium } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { createPages } from '../../pages/app'
 import { urls } from '../../data/urls';
+import { amazonData } from '../../data/amazonData';
 
 
-test('amazon test', async ({ }) => {
+test('amazon test', async ({ page, context }) => {
   test.setTimeout(60000)
-  const browser = await chromium.launch()
-  const context = await browser.newContext()
-  const page = await context.newPage()
   const pages = createPages(page)
 
   await page.goto(urls.amazonUrl)
+  await pages.amazon.searchBox.waitFor({ state: 'visible' })
   await expect(page).toHaveTitle(/Amazon/)
   await pages.amazon.clickContinueShoppingIfVisible()
 
-  await pages.amazon.selectTheDepartment(testData.departmentName)
+  await pages.amazon.selectTheDepartment(amazonData.departmentName)
+  await pages.amazon.searchProductByName(amazonData.searchProduct)
 
-  await pages.amazon.searchProductByName('iphone 17')
+  const [newPage] = await Promise.all([
+    context.waitForEvent('page'),
+    pages.amazon.iphone17Locator('iPhone 17').click()
+  ])
 
-  // await page.pause()
+  await newPage.waitForLoadState()
+  console.log(await newPage.title())
 
-  // const rows = page.locator("[class='left-pane-results-container'] [role='button']")
-  //   for (let i = 0; i < await rows.count(); ++i)
-  //     await expect(rows.nth(i)).toContainText('iphone 17')
-  // await page.getByPlaceholder('Search Amazon.in').clear()
-  // await page.waitForTimeout(2000)
-
-  // await pages.amazon.searchAndSelect('iphone 17 256gb')
-
-  // const pagePromise = context.waitForEvent('page')
-  // await page.locator("//*[contains(text(),'Apple iPhone 17')]").first().click()
-  // const newPage = await pagePromise
-
-  // // Navigate to next tab and click on Visit the Apple Store
-  // await newPage.locator("//*[contains(text(),'Visit the Apple Store')]").click()
-  // await newPage.waitForLoadState()
-  // // await page.waitForTimeout(2000)
-  // await newPage.getByRole("button", { name: "Apple Watch" }).click()
-  // await newPage.getByRole("link", { name: "Apple Watch SE (GPS + Cellular)" }).click()
-  // await newPage.getByLabel("Quick look, Starlight Sport").first().click()
-  // await expect(newPage.getByTestId("product-showcase-title")).toContainText("[GPS + Cellular 40 mm]")
+  // Navigate to next tab and click on Visit the Apple Store
+  const newTabPages = createPages(newPage)
+  await newTabPages.amazon.visitTheAppleLinkStore()
+  await newTabPages.amazon.selectAppleWatch(amazonData.appleWatchLinkName)
+  await newTabPages.amazon.selectQuickLook(amazonData.appleWatchThumbnailTitle)
+  await newTabPages.amazon.verifyWatchShowcaseText(amazonData.appleWatchShowcaseText)
 })
 
-const testData = {
-  departmentName: 'search-alias=electronics'
-}
