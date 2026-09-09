@@ -46,11 +46,12 @@ export class amazonPage extends BasePage {
     await this.appleWatchThumbnail(appleWatchThumbnailTitle).hover()
     await expect(this.quickLookButton).toBeVisible()
     await expect(this.quickLookButton).toBeEnabled()
+    await this.quickLookButton.hover()
     await this.quickLookButton.click()
   }
 
   async verifyWatchShowcaseText(expectedShowcaseText: string) {
-    await expect(this.productShowcaseTitle).toBeVisible()
+    await this.productShowcaseTitle.waitFor({ state: 'visible', timeout: 10000 })
     await expect(this.productShowcaseTitle).toContainText(expectedShowcaseText)
   }
 }

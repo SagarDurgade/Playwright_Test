@@ -8,9 +8,10 @@ export class DuckduckgoPage extends BasePage {
     searchError = this.page.locator('text=Unexpected error. Please try again.')
 
     async searchText(text: string) {
+        await this.page.waitForLoadState('networkidle')
         await this.searchInput.fill(text)
         await this.page.keyboard.press('Enter')
-        await this.page.waitForLoadState('networkidle')
+        await this.page.waitForLoadState()
     }
 
     async verifySearchResult(text: string) {

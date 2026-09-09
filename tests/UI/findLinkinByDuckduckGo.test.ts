@@ -6,6 +6,7 @@ import { dateTime } from '../../utils/utilities'
 test('Find LinkedIn profile in DuckDuckGo search results', async ({ page }) => {
     const pages = createPages(page)
     await page.goto(testData.urls.duckduckgoUrl)
+    await page.waitForLoadState('networkidle')
     await pages.duckduckgo.searchText(testData.userData.searchData)
     await pages.duckduckgo.verifySearchResult(testData.userData.verifyText)
     await pages.duckduckgo.selectSearchResult(testData.userData.verifyText)
