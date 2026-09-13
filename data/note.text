@@ -1,0 +1,11 @@
+  // palywright explicit waits examples
+  // await page.waitForEvent('popup')
+  // await newPage.waitForFunction(() => document.readyState === 'complete')
+  // await newPage.waitForLoadState()
+  // await newPage.waitForNavigation()
+  // await newPage.waitForRequest(/apple-watch/)
+  // await newPage.waitForResponse(/apple-watch/)
+  // await newPage.waitForSelector('text=Apple Watch')
+  // await newPage.waitForTimeout(5000) // Wait for 5 seconds
+  // await newPage.waitForURL(/apple-watch/)
+
