@@ -109,3 +109,4 @@ jobs:
           name: playwright-report-final
           path: playwright-report/
           retention-days: 30
+          fail-on-error: false
