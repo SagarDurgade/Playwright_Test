@@ -31,7 +31,7 @@ jobs:
 
     # Playwright official image already contains browsers
     container:
-      image: mcr.microsoft.com/playwright:v1.60.0-jammy
+      image: mcr.microsoft.com/playwright:v1.63.0-jammy
 
     steps:
       # Checkout Repository
