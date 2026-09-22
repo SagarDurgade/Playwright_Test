@@ -7,7 +7,7 @@ env:
 # Trigger Conditions
 on:
   schedule:
-    - cron: '30 2 * * *' # Daily at 8:00 AM IST
+    - cron: '0 4 * * *' # Daily at 9:30 AM IST
 
   workflow_dispatch:
     inputs:
@@ -50,6 +50,9 @@ jobs:
 
       # Run Playwright Tests
       - name: Run Playwright Tests
+        env:
+          NAUKRI_EMAIL: ${{ secrets.NAUKRI_EMAIL }}
+          NAUKRI_PASSWORD: ${{ secrets.NAUKRI_PASSWORD }}
         run: |
           mkdir -p logs
 

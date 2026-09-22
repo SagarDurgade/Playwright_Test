@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@types/xlsx": "^0.0.35",
+    "dotenv": "^18.0.2",
     "exceljs": "^4.4.0",
     "typescript": "^5.8.3"
   }

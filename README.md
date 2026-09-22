@@ -1,6 +1,6 @@
 # Playwright Test Framework
 
-A **TypeScript-based test automation framework** built on [Playwright](https://playwright.dev/), following the **Page Object Model (POM)** pattern. It supports both UI and API testing, with Cucumber BDD integration for API scenarios and multi-reporter output (HTML, JUnit, Allure).
+A **TypeScript-based test automation framework** built on [Playwright](https://playwright.dev/), following the **Page Object Model (POM)** pattern. It covers UI automation (Amazon, DuckDuckGo, MakeMyTrip, Naukri), Playwright's native API testing, and Excel-driven data tests, and runs on a daily schedule via GitHub Actions.
 
 ---
 
@@ -8,46 +8,47 @@ A **TypeScript-based test automation framework** built on [Playwright](https://p
 
 ```
 Playwright_Test/
-├── pages/                         # Page Object Model (POM) layer
-│   ├── BasePage.ts                # Base class shared by all page objects
-│   ├── app.ts                     # Page factory — creates all page instances
-│   ├── GooglePage.ts              # Google search page actions & assertions
-│   └── DuckduckgoPage.ts          # DuckDuckGo search page actions & assertions
+├── pages/                              # Page Object Model (POM) layer
+│   ├── BasePage.ts                     # Base class shared by all page objects; re-exports `expect`/`Page`
+│   ├── app.ts                          # Page factory — createPages(page) builds every page object at once
+│   ├── GooglePage.ts                   # Google search actions & assertions
+│   ├── DuckduckgoPage.ts               # DuckDuckGo search actions & assertions
+│   ├── amazonPage.ts                   # Amazon search, product & Apple Store flows
+│   ├── MakemytripPage.ts               # MakeMyTrip flight/hotel search flows
+│   └── NaukariPage.ts                  # Naukri login & resume upload flow
 │
-├── data/                          # Test data layer
-│   ├── urls.ts                    # Application URLs
-│   ├── userData.ts                # User-specific test data (search terms, expected text)
-
-│   └── index.ts                   # Aggregates and exports all data as `testData`
+├── data/                                # Test data layer
+│   ├── urls.ts                          # Application URLs
+│   ├── userData.ts                      # Search terms / expected text used across suites
+│   ├── amazonData.ts                    # Amazon-specific test data
+│   ├── index.ts                         # Aggregates everything into a single `testData` export
+│   ├── SagarDurgade_SDET_8years.pdf     # Sample resume used by the Naukri upload test
+│   └── userExcelDataFile.xlsx           # Sample Excel data used by the Excel test
 │
-├── utils/                         # Reusable utility helpers
-│   ├── excel.utils.ts             # Excel read / write / verify (ExcelJS)
-│   ├── getDateTime.ts             # Date & time helpers wrapped in Playwright steps
-│   └── utilities.ts               # Singleton exports: `excel`, `dateTime`
+├── utils/                               # Reusable utility helpers
+│   ├── excel.utils.ts                   # `readAndwrightExcel` — read/write/verify Excel via ExcelJS
+│   ├── getDateTime.ts                   # `GetDateTime` — current time helpers wrapped in `test.step`
+│   └── utilities.ts                     # Singleton exports: `excel`, `dateTime`
 │
 ├── tests/
 │   ├── UI/
-│   │   ├── findLinkinByDuckduckGo.test.ts   # Active UI test suite
-│   │   └── notAutomated/                    # Pending / commented-out tests
-│   │       ├── google.test.ts
-│   │       ├── todo.test.ts
-│   │       └── excel2.test.ts
+│   │   ├── amazon.test.ts                     # Amazon search → product page → new tab → Apple Store flow
+│   │   ├── browserWithoutFixxture.spec.ts      # Launches Chromium manually, without Playwright's built-in fixtures
+│   │   ├── findLinkinByDuckduckGo.test.ts      # DuckDuckGo search for a LinkedIn profile (runs on `msedge` channel)
+│   │   ├── makemytripFlightSearch.test.ts      # MakeMyTrip flight/hotel E2E specs (currently commented out)
+│   │   ├── popUp.spec.ts                       # Handles JS alert/confirm/prompt dialogs
+│   │   ├── readAndWriteExcel.spec.ts           # Reads credentials from an Excel file and logs in
+│   │   ├── stroageState.spec.ts                # Notes/snippet for saving auth storage state (commented out)
+│   │   ├── uploadResumeToNaukri.spec.ts        # Naukri login + resume upload, credentials from `.env`
+│   │   └── notAutomated/                       # Draft/pending specs not part of the active run
 │   └── API/
-│       └── cucumber/
-│           └── features/
-│               ├── realtime.feature          # BDD feature file (reqres.in API)
-│               └── step_definitions/
-│                   └── realtime.steps.ts     # Cucumber step implementations
+│       └── apiFirst.spec.ts             # GET/POST requests against the Conduit API using Playwright's `request` fixture
 │
-├── allure-results/                # Raw Allure test result files
-├── allure-report/                 # Generated Allure HTML report
-├── playwright-report/             # Playwright built-in HTML report
-├── test-results/                  # JUnit XML report output
-├── download/                      # Downloaded files during test runs
-├── storageState.json              # Saved browser authentication state
-├── playwright.config.ts           # Playwright configuration
-├── tsconfig.json                  # TypeScript compiler options
-└── package.json                   # Dependencies and npm scripts
+├── .github/workflows/playwright.yml     # CI: scheduled + manual test runs, uploads logs/reports as artifacts
+├── .env / .env.example                  # Local secrets (gitignored) / template for required env vars
+├── playwright.config.ts                 # Playwright configuration (loads `.env` via `dotenv/config`)
+├── tsconfig.json                        # TypeScript compiler options
+└── package.json                         # Dependencies and npm scripts
 ```
 
 ---
@@ -56,20 +57,23 @@ Playwright_Test/
 
 ### 1. `pages/` — Page Object Model
 
-All UI interactions are encapsulated in page classes.
+All UI interactions are encapsulated in page classes that extend `BasePage`.
 
 | File | Responsibility |
 |---|---|
-| `BasePage.ts` | Holds the `Page` instance and re-exports `expect` and `Page` from Playwright |
+| `BasePage.ts` | Holds the `Page` instance and re-exports `expect`/`Page` from Playwright |
 | `app.ts` | Factory function `createPages(page)` that returns all page objects in one call |
-| `GooglePage.ts` | Locators and methods for Google search (`searchText`, `verifySearchResult`) |
-| `DuckduckgoPage.ts` | Locators and methods for DuckDuckGo (`searchText`, `verifySearchResult`, `selectSearchResult`, `ifDownloadOptionExists`) |
+| `GooglePage.ts` | Locators/methods for Google search |
+| `DuckduckgoPage.ts` | Locators/methods for DuckDuckGo search and result verification |
+| `amazonPage.ts` | Amazon search, department selection, product page, Apple Store cross-tab flow |
+| `MakemytripPage.ts` | One-way/round-trip flight search and hotel search flows |
+| `NaukariPage.ts` | Login and resume upload (`#attachCV` file input + "Update resume" submit) |
 
 **Usage in a test:**
 ```typescript
 const pages = createPages(page)
-await pages.duckduckgo.searchText('playwright')
-await pages.duckduckgo.verifySearchResult('Playwright - Fast and reliable end-to-end testing')
+await pages.naukari.login(process.env.NAUKRI_EMAIL!, process.env.NAUKRI_PASSWORD!)
+await pages.naukari.updateResume('data/SagarDurgade_SDET_8years.pdf')
 ```
 
 ---
@@ -80,9 +84,10 @@ All test data is centralized and imported via a single `testData` object.
 
 | File | Contents |
 |---|---|
-| `urls.ts` | `duckduckgoUrl` and other base URLs |
-| `userData.ts` | `searchData` (search term), `verifyText` (expected result text) |
-| `index.ts` | Exports `{ urls, userData }` as `testData` |
+| `urls.ts` | Base URLs (DuckDuckGo, MakeMyTrip, Amazon, Naukri) |
+| `userData.ts` | Search terms, expected text, MakeMyTrip cities/URL patterns |
+| `amazonData.ts` | Amazon department, product search term, Apple Watch labels |
+| `index.ts` | Exports `{ urls, userData, amazonData }` as `testData` |
 
 **Usage in a test:**
 ```typescript
@@ -96,12 +101,10 @@ await pages.duckduckgo.searchText(testData.userData.searchData)
 
 ### 3. `utils/` — Utility Helpers
 
-Reusable helpers that are not page-specific.
-
 | File | Class / Export | Purpose |
 |---|---|---|
 | `excel.utils.ts` | `readAndwrightExcel` | Read, write, and verify Excel files using **ExcelJS** |
-| `getDateTime.ts` | `GetDateTime` | Get current time and time-with-seconds, wrapped as Playwright steps |
+| `getDateTime.ts` | `GetDateTime` | Current time helpers, wrapped as Playwright `test.step`s |
 | `utilities.ts` | `excel`, `dateTime` | Singleton instances ready to import anywhere |
 
 **Usage in a test:**
@@ -109,25 +112,26 @@ Reusable helpers that are not page-specific.
 import { dateTime, excel } from '../../utils/utilities'
 
 const time = await dateTime.getCurrentTime()
-const data = await excel.readExcel('./data/testdata.xlsx')
+const data = await excel.readExcel('./data/userExcelDataFile.xlsx')
 ```
 
 ---
 
 ### 4. `tests/` — Test Suites
 
-#### UI Tests (`tests/UI/`)
-Written with `@playwright/test`. Tests import pages via `createPages()` and data via `testData`.
+#### UI tests (`tests/UI/`)
+- **`amazon.test.ts`** — searches Amazon, opens a product in a new tab, and verifies the Apple Store showcase.
+- **`browserWithoutFixxture.spec.ts`** — launches Chromium manually (no built-in `page` fixture) to demonstrate raw Playwright API usage.
+- **`findLinkinByDuckduckGo.test.ts`** — searches DuckDuckGo for a LinkedIn profile; forced to run on the `msedge` channel because DuckDuckGo blocks Playwright's bundled Chromium in headless mode.
+- **`makemytripFlightSearch.test.ts`** — one-way/round-trip flight and hotel search specs (currently commented out/disabled).
+- **`popUp.spec.ts`** — accepts native JS `alert`/`confirm`/`prompt` dialogs.
+- **`readAndWriteExcel.spec.ts`** — reads login credentials from `data/userExcelDataFile.xlsx` and signs in to a demo app.
+- **`stroageState.spec.ts`** — reference snippet for saving `storageState.json` (commented out, not an active test).
+- **`uploadResumeToNaukri.spec.ts`** — logs into Naukri and uploads a resume; credentials come from environment variables, not hardcoded.
+- **`notAutomated/`** — draft specs excluded from the main run.
 
-**Active test — `findLinkinByDuckduckGo.test.ts`:**
-- Searches DuckDuckGo for a LinkedIn profile and verifies the result appears.
-- Gets the current date/time using the `dateTime` utility.
-
-#### API Tests (`tests/API/cucumber/`)
-Uses **Cucumber BDD** (`@cucumber/cucumber`) together with Playwright's `request` API for HTTP calls.
-
-- **Feature file** (`realtime.feature`): Written in Gherkin, describes API scenarios for [reqres.in](https://reqres.in).
-- **Step definitions** (`realtime.steps.ts`): Maps Gherkin steps to Playwright API requests and `expect` assertions.
+#### API tests (`tests/API/`)
+- **`apiFirst.spec.ts`** — GET/POST requests against the Conduit demo API using Playwright's built-in `request` fixture (no Cucumber/BDD layer currently wired up).
 
 ---
 
@@ -137,41 +141,54 @@ Uses **Cucumber BDD** (`@cucumber/cucumber`) together with Playwright's `request
 - Node.js >= 18
 - npm
 
-### Install dependencies
+### 1. Install dependencies
 ```bash
 npm install
 ```
 
-### Install Playwright browsers
+### 2. Install Playwright browsers
 ```bash
 npx playwright install
 ```
+
+### 3. Configure environment variables
+Copy the template and fill in real values — `playwright.config.ts` loads `.env` automatically via `dotenv/config`.
+```bash
+cp .env.example .env
+```
+Required variables:
+| Variable | Used by |
+|---|---|
+| `NAUKRI_EMAIL` | `tests/UI/uploadResumeToNaukri.spec.ts` |
+| `NAUKRI_PASSWORD` | `tests/UI/uploadResumeToNaukri.spec.ts` |
+
+`.env` is gitignored — never commit real credentials. In CI, the same variables are supplied via GitHub Actions repository secrets (see below).
 
 ---
 
 ## Running Tests
 
-### Run all UI tests (Playwright)
+### Run all tests
 ```bash
 npx playwright test
 ```
 
 ### Run a specific test file
 ```bash
-npx playwright test tests/UI/findLinkinByDuckduckGo.test.ts
+npx playwright test tests/UI/uploadResumeToNaukri.spec.ts
 ```
 
-### Run API tests (Cucumber BDD)
+### Run tests matching a name (grep)
 ```bash
-npm run test:cucumber
+npx playwright test -g "upload resume to naukri"
 ```
 
-### Run tests in headed mode (visible browser)
+### Run in headed mode (visible browser)
 ```bash
 npx playwright test --headed
 ```
 
-### Run tests in a specific browser
+### Run in a specific browser project
 ```bash
 npx playwright test --project=chromium
 ```
@@ -180,21 +197,30 @@ npx playwright test --project=chromium
 
 ## Reporting
 
-### Playwright HTML Report
-Generated automatically after each run. Open with:
+### Playwright HTML report
+Generated automatically after each run (`reporter: html` in `playwright.config.ts`).
 ```bash
 npx playwright show-report
 ```
 
-### JUnit XML Report
-Output to `test-results/junit-results.xml` — compatible with CI systems like Jenkins and GitHub Actions.
-
-### Allure Report
-Generate and open the Allure report:
+### Traces
+Traces are captured `on-first-retry`. To view a trace:
 ```bash
-npx allure generate allure-results --clean
-npx allure open
+npx playwright show-trace path/to/trace.zip
 ```
+
+> `allure-playwright` / `allure-commandline` are installed as dependencies but are not currently wired into `reporter` in `playwright.config.ts` — add an `['allure-playwright']` entry there first if you want Allure output.
+
+---
+
+## Continuous Integration
+
+`.github/workflows/playwright.yml` runs the suite in the official `mcr.microsoft.com/playwright` container:
+
+- **Schedule**: daily at `0 4 * * *` UTC (9:30 AM IST)
+- **Manual trigger**: `workflow_dispatch` with an optional `tag` input to `--grep` a subset of tests
+- **Secrets required**: add `NAUKRI_EMAIL` and `NAUKRI_PASSWORD` under repo **Settings → Secrets and variables → Actions** — they're injected into the test step's environment
+- **Artifacts uploaded**: run logs, Playwright HTML report, and `test-results/` (raw traces/screenshots), each retained for 30 days
 
 ---
 
@@ -205,11 +231,12 @@ npx allure open
 | Test directory | `./tests` |
 | Parallel execution | Enabled (`fullyParallel: true`) |
 | Retries | 1 on CI, 0 locally |
-| Workers on CI | 4 |
+| Workers | 4 (CI and local) |
 | Browser | Chromium (Desktop Chrome) |
 | Trace | On first retry |
 | Screenshot | On failure only |
-| Reporters | HTML, JUnit XML |
+| Reporters | HTML only |
+| Env loading | `dotenv/config` (reads `.env` at the repo root) |
 
 ---
 
@@ -218,9 +245,10 @@ npx allure open
 | Package | Purpose |
 |---|---|
 | `@playwright/test` | Core test runner, browser automation, API testing |
-| `@cucumber/cucumber` | BDD test runner for feature files |
-| `exceljs` | Read and write Excel files (`.xlsx`) |
-| `allure-playwright` | Allure reporter integration |
+| `dotenv` | Loads `.env` values into `process.env` |
+| `exceljs` / `xlsx` | Read and write Excel files (`.xlsx`) |
+| `@cucumber/cucumber` | Installed for BDD-style tests (not currently wired into any active spec) |
+| `allure-playwright` / `allure-commandline` | Allure reporter integration (not currently enabled in `playwright.config.ts`) |
 | `typescript` | TypeScript language support |
 | `ts-node` | Run TypeScript files directly (used by Cucumber) |
 

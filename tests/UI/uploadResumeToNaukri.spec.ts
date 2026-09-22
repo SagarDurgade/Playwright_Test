@@ -1,15 +1,10 @@
-import { test, expect } from '@playwright/test'
-// import { urls } from '../../data/urls'
+import { test } from '@playwright/test'
+import { createPages } from '../../pages/app'
+import { urls } from '../../data/urls'
 
 test('upload resume to naukri', async ({ page }) => {
-    await page.goto('https://www.naukri.com/')
-    await page.getByRole('link', { name: 'Login' }).click()
-    await page.getByRole('textbox', { name: 'Email ID / Username' }).fill('sagardurgade@gmail.com');
-    await page.getByRole('textbox', { name: 'Password' }).fill('N@ukri2210')
-    await page.getByRole('button', { name: 'Login', exact: true }).click()
-    await page.getByRole('link', { name: 'View profile' }).click()
-    // await page.getByRole('button', { name: 'Update resume' }).waitFor({ state: 'visible' })
-    // await page.pause()
-    // await page.locator('input[type="file"]').setInputFiles('data/SagarDurgade_SDET_8years.pdf')
-    // await expect(page.getByText('Resume has been successfully uploaded.')).toBeVisible()
+     const pages = createPages(page)
+    await page.goto(urls.naukriUrl)
+    await pages.naukari.login(process.env.NAUKRI_EMAIL!, process.env.NAUKRI_PASSWORD!)
+    await pages.naukari.updateResume('data/SagarDurgade_SDET_8years.pdf')
 })
