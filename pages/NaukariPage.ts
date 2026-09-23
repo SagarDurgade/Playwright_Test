@@ -17,6 +17,7 @@ export class NaukariPage extends BasePage {
          await expect(this.emailTextbox).toHaveValue(email)
          await this.passwordTextbox.fill(password)
          await expect(this.passwordTextbox).toHaveValue(password)
+         await this.page.waitForTimeout(1000)
          await this.loginButton.click()
      }
 
