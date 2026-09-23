@@ -4,7 +4,7 @@ export class NaukariPage extends BasePage {
      loginLink = this.page.getByRole('link', { name: 'Login' })
      emailTextbox = this.page.getByRole('textbox', { name: 'Email ID / Username' })
      passwordTextbox = this.page.getByRole('textbox', { name: 'Password' })
-     loginButton = this.page.getByRole('button', { name: 'Login', exact: true })
+     loginButton = this.page.locator('//button[text()="Login"]')
      viewProfileLink = this.page.getByRole('link', { name: 'View profile' })
      updateResumeButton = this.page.getByRole('button', { name: 'Update resume' })
      attachCVInput = this.page.locator('#attachCV')
@@ -17,7 +17,7 @@ export class NaukariPage extends BasePage {
          await expect(this.emailTextbox).toHaveValue(email)
          await this.passwordTextbox.fill(password)
          await expect(this.passwordTextbox).toHaveValue(password)
-         await this.page.waitForTimeout(1000)
+         await this.page.waitForTimeout(5000)
          await this.loginButton.click()
      }
 
