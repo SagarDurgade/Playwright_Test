@@ -8,11 +8,15 @@ export class NaukariPage extends BasePage {
      viewProfileLink = this.page.getByRole('link', { name: 'View profile' })
      updateResumeButton = this.page.getByRole('button', { name: 'Update resume' })
      attachCVInput = this.page.locator('#attachCV')
+     loginRegisterText = this.page.getByText('LoginRegister for free')
 
      async login(email: string, password: string) {
          await this.loginLink.click()
+         await expect(this.loginRegisterText).toBeVisible()
          await this.emailTextbox.fill(email)
+         await expect(this.emailTextbox).toHaveValue(email)
          await this.passwordTextbox.fill(password)
+         await expect(this.passwordTextbox).toHaveValue(password)
          await this.loginButton.click()
      }
 
