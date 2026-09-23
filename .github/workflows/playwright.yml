@@ -57,9 +57,9 @@ jobs:
           mkdir -p logs
 
           if [ -n "${{ github.event.inputs.tag }}" ]; then
-            npx playwright test --grep "${{ github.event.inputs.tag }}" 2>&1 | tee logs/test-run.log
+            xvfb-run --auto-servernum npx playwright test --grep "${{ github.event.inputs.tag }}" 2>&1 | tee logs/test-run.log
           else
-            npx playwright test 2>&1 | tee logs/test-run.log
+            xvfb-run --auto-servernum npx playwright test 2>&1 | tee logs/test-run.log
           fi
 
       # Upload Logs
