@@ -43,8 +43,23 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Install Microsoft Edge
-        run: npx playwright install --with-deps msedge
+      - name: Get Playwright Version
+        id: pw-version
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright Browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-msedge-${{ runner.os }}-${{ steps.pw-version.outputs.version }}
+
+      - name: Install Microsoft Edge Browser
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install msedge
+
+      - name: Install OS Dependencies
+        run: npx playwright install-deps msedge
 
       - name: Run Playwright Tests
         env:
