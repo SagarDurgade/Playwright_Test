@@ -2,7 +2,7 @@ name: Auto Playwright Tests
 
 on:
   schedule:
-    - cron: '0 4 * * *' # Daily at 9:30 AM IST
+    - cron: '45 16 * * *' # Daily at 10:15 PM IST
 
   workflow_dispatch:
     inputs:
