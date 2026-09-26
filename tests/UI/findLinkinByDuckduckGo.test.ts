@@ -20,7 +20,7 @@ test.describe('LinkedIn search via DuckDuckGo', () => {
     })
 })
 
-test('Get the currect date and time', async () => {
+test('Get the current date and time', async () => {
     const currentTime = await dateTime.getCurrentTime()
     const currentTimeAndSeconds = await dateTime.getCurrentTimeAndSeconds()
     console.log(`Current Time: ${currentTime}`)
