@@ -2,7 +2,7 @@ name: Auto Playwright Tests
 
 on:
   schedule:
-    - cron: '45 16 * * *' # Daily at 10:15 PM IST
+    - cron: '0 4 * * *' # Daily at 9:30 AM IST
 
   workflow_dispatch:
     inputs:
@@ -86,3 +86,15 @@ jobs:
           path: test-results/
           retention-days: 30
           if-no-files-found: ignore
+
+  publish-report:
+    name: Upload Playwright Report
+    needs: execute-tests
+    runs-on: ubuntu-latest
+    steps:
+      # Download artifact generated from previous job
+      - name: Download Playwright Report
+        uses: actions/download-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
