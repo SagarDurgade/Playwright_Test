@@ -9,7 +9,7 @@ on:
       tag:
         description: 'Test tag, e.g. @Naukri (empty runs all)'
         required: false
-        default: ''
+        default: '@Naukri'
         type: string
 
 permissions:
@@ -55,11 +55,8 @@ jobs:
           set -euo pipefail
           mkdir -p logs
 
-          args=(--project=Edge --workers=1 --reporter=line,html)
-
-          if [[ -n "$TEST_TAG" ]]; then
-            args+=(--grep "$TEST_TAG")
-          fi
+          TEST_TAG="${TEST_TAG:-@Naukri}"
+          args=(--project=Edge --workers=1 --reporter=line,html --grep "$TEST_TAG")
 
           npx playwright test "${args[@]}" 2>&1 | tee logs/test-run.log
 
