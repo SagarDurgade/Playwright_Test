@@ -22,15 +22,15 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: 'chromium',
-    //   use: { ...devices['Desktop Chrome'] },
-    // },
-
     {
-      name: 'Edge',
-      use: { ...devices['Desktop Edge'], channel: 'msedge' },
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
     },
+
+    // {
+    //   name: 'Edge',
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    // },
     // {
     //   name: 'Local Edge',
     //   use: {
