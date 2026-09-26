@@ -28,13 +28,13 @@ export class NaukariPage extends BasePage {
     }
 
     async isLoginRequired(): Promise<boolean> {
-  await expect.poll(async () => {
-    const profileVisible = await this.viewProfileLink.isVisible()
-    const loginVisible = await this.loginLink.isVisible()
+        await expect.poll(async () => {
+        const profileVisible = await this.viewProfileLink.isVisible()
+        const loginVisible = await this.loginLink.isVisible()
 
-    return profileVisible || loginVisible
-    }, { message: 'Waiting for the Naukri login or profile option', timeout: 15_000 }).toBe(true)
+        return profileVisible || loginVisible
+        }, { message: 'Waiting for the Naukri login or profile option', timeout: 30_000 }).toBe(true)
 
-    return !(await this.viewProfileLink.isVisible())
-}
+        return !(await this.viewProfileLink.isVisible())
+    }
 }
