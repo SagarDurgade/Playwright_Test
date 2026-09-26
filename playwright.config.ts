@@ -28,8 +28,8 @@ export default defineConfig({
     // },
 
     {
-      name: 'Local Edge',
-      use: { channel: 'msedge' },
+      name: 'Edge',
+      use: { ...devices['Desktop Edge'], channel: 'msedge' },
     },
     // {
     //   name: 'Local Edge',
