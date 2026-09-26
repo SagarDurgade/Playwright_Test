@@ -4,7 +4,7 @@ import { urls } from '../../data/urls'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 
-test.use({ headless: false })
+test.use({ headless: !!process.env.CI })
 const storageStatePath = path.resolve('storageState.json') 
 
 // test('upload resume to naukri', { tag: '@Naukri' }, async ({ page }) => {
