@@ -22,10 +22,20 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'] },
+    // },
+
+     {
+    name: 'Edge',
+    use: {
+      ...devices['Desktop Edge'],
+      channel: 'msedge',
+      headless: true,
+      launchOptions: { args: ['--disable-http2'] },
     },
+  },
 
     // {
     //   name: 'Edge',

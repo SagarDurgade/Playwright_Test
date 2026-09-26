@@ -7,12 +7,12 @@ import * as path from 'node:path'
 test.use({ headless: false })
 const storageStatePath = path.resolve('storageState.json') 
 
-test('upload resume to naukri', { tag: '@Naukri' }, async ({ page }) => {
-  const pages = createPages(page)
-  await page.goto(urls.naukriUrl)
-  await pages.naukari.login(process.env.NAUKRI_EMAIL!, process.env.NAUKRI_PASSWORD!)
-  await pages.naukari.updateResume('data/SagarDurgade_SDET_8years.pdf')
-})
+// test('upload resume to naukri', { tag: '@Naukri' }, async ({ page }) => {
+//   const pages = createPages(page)
+//   await page.goto(urls.naukriUrl)
+//   await pages.naukari.login(process.env.NAUKRI_EMAIL!, process.env.NAUKRI_PASSWORD!)
+//   await pages.naukari.updateResume('data/SagarDurgade_SDET_8years.pdf')
+// })
 
 
 test('Login to Naukri and reuse the saved session', { tag: '@Naukri' }, async ({ browser }) => {
