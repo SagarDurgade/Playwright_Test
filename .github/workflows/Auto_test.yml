@@ -5,7 +5,7 @@ on:
     # Offset from :00 to avoid GitHub's top-of-the-hour scheduling congestion/drops
     # - cron: '7 4 * * *' # Daily at ~9:37 AM IST
     #  execute  tests at 12:05 pm every day
-    - cron: '45 13 * * *' # Daily at 7:15 PM IST
+    - cron: '15 4 * * *' # Daily at 9:45 AM IST
 
   workflow_dispatch:
     inputs:
