@@ -3,7 +3,9 @@ name: Auto Playwright Tests
 on:
   schedule:
     # Offset from :00 to avoid GitHub's top-of-the-hour scheduling congestion/drops
-    - cron: '7 4 * * *' # Daily at ~9:37 AM IST
+    # - cron: '7 4 * * *' # Daily at ~9:37 AM IST
+    #  execute  tests at 12:05 pm every day
+    - cron: '5 6 * * *' # Daily at ~12:05 PM IST
 
   workflow_dispatch:
     inputs:
