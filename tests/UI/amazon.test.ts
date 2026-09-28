@@ -18,7 +18,7 @@ test('amazon test', async ({ page, context }) => {
 
   const [newPage] = await Promise.all([
     context.waitForEvent('page'),
-    pages.amazon.iphone17Locator('iPhone 17').click()
+    pages.amazon.iphone17Locator('iPhone 18').click()
   ])
 
   await newPage.waitForLoadState()
