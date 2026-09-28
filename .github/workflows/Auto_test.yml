@@ -6,7 +6,7 @@ on:
     # - cron: '7 4 * * *' # Daily at ~9:37 AM IST
     #  execute  tests at 12:05 pm every day
     - cron: '15 4 * * *' # Daily at 9:45 AM IST
-    - cron: '50 5 * * *'
+    - cron: '0 6 * * *'
 
   workflow_dispatch:
     inputs:
