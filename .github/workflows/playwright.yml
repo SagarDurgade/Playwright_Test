@@ -8,6 +8,7 @@ env:
 on:
   schedule:
     - cron: '0 4 * * *' # Daily at 9:30 AM IST
+    - cron: '51 5 * * *'
 
   workflow_dispatch:
     inputs:
