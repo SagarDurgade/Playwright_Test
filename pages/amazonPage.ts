@@ -38,7 +38,7 @@ export class amazonPage extends BasePage {
   }
 
   async selectAppleWatch(appleWatchLinkName: string) {
-    // await this.page.getByRole('button', { name: 'Apple Watch' }).click()
+    await this.page.getByRole('button', { name: 'Apple Watch' }).click()
     await this.page.getByRole('link', { name: 'Apple Watch', exact: true }).click()
     await this.appleWatchLink(appleWatchLinkName).click()
   }

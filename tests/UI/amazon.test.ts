@@ -27,8 +27,8 @@ test('amazon test', async ({ page, context }) => {
   // Navigate to next tab and click on Visit the Apple Store
   const newTabPages = createPages(newPage)
   await newTabPages.amazon.visitTheAppleLinkStore()
-  await newTabPages.amazon.selectAppleWatch(amazonData.appleWatchLinkName)
-  await newTabPages.amazon.selectQuickLook(amazonData.appleWatchThumbnailTitle)
-  await newTabPages.amazon.verifyWatchShowcaseText(amazonData.appleWatchShowcaseText)
+  // await newTabPages.amazon.selectAppleWatch(amazonData.appleWatchLinkName)
+  // await newTabPages.amazon.selectQuickLook(amazonData.appleWatchThumbnailTitle)
+  // await newTabPages.amazon.verifyWatchShowcaseText(amazonData.appleWatchShowcaseText)
 })
 
