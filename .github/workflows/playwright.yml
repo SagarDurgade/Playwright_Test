@@ -104,6 +104,7 @@ jobs:
   publish-report:
     name: Upload Playwright Report
     needs: execute-tests
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     steps:
       # Download artifact generated from previous job
