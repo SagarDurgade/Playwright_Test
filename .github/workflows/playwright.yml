@@ -80,7 +80,8 @@ jobs:
           set -euo pipefail
           mkdir -p logs
 
-          args=(--project=Edge --workers=1 --reporter=line,html)
+          # Worker count comes from playwright.config.ts (workers: 4 on CI)
+          args=(--project=Edge --reporter=line,html)
 
           # Only filter by tag when one is actually selected; otherwise run the full suite
           if [ -n "$TEST_TAG" ]; then
