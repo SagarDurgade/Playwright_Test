@@ -1,5 +1,7 @@
-import { defineConfig, devices } from '@playwright/test';
-import 'dotenv/config';
+import { defineConfig, devices } from '@playwright/test'
+import { config } from 'dotenv'
+
+config({ quiet: true })
 
 export default defineConfig({
   testDir: './tests',

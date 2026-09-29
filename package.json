@@ -1,10 +1,7 @@
 {
-  "name": "playwright",
+  "name": "playwright-test-automation",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test:cucumber": "cucumber-js --require-module ts-node/register --require tests/api/step_definitions/**/*.ts tests/api/features/**/*.feature"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",

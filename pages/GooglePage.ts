@@ -13,7 +13,6 @@ export class GooglePage extends BasePage {
     }
 
     async verifySearchResult(text: string) {
-        await this.page.pause()
         await expect(this.page.locator('h3')).toContainText(text, { timeout: 5000 })
     }
 }

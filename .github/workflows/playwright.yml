@@ -8,18 +8,22 @@ on:
 
   schedule:
     # Offset from :00 to avoid GitHub's top-of-the-hour scheduling congestion/drops
-    - cron: '10 8 * * *'
+    - cron: '0 4 * * *'
 
   workflow_dispatch:
     inputs:
       tag:
         description: 'Test tag, e.g. @Naukri (empty runs all)'
         required: false
-        # default: '@Naukri'
+        default: '@Naukri'
         type: string
 
 permissions:
   contents: read
+
+concurrency:
+  group: playwright-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   CI: 'true'
@@ -76,8 +80,12 @@ jobs:
           set -euo pipefail
           mkdir -p logs
 
-          TEST_TAG="${TEST_TAG:-@Naukri}"
-          args=(--project=Edge --workers=1 --reporter=line,html --grep "$TEST_TAG")
+          args=(--project=Edge --workers=1 --reporter=line,html)
+
+          # Only filter by tag when one is actually selected; otherwise run the full suite
+          if [ -n "$TEST_TAG" ]; then
+            args+=(--grep "$TEST_TAG")
+          fi
 
           npx playwright test "${args[@]}" 2>&1 | tee logs/test-run.log
 

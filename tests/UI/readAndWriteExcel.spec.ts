@@ -22,7 +22,6 @@ test('read and write excel test', async ({ page }) => {
     await page.getByRole('textbox', { name: 'Email' }).fill(`${xlsxToJson[0].email}`)
     await page.getByRole('textbox', { name: 'Password' }).fill(`${xlsxToJson[0].password}`)
     await page.getByRole('button', { name: 'Sign in' }).click()
-    await page.pause()
     await page.close()
 
 })
