@@ -1,8 +1,15 @@
-import { Page } from '@playwright/test'
+import { Page, Locator } from '@playwright/test'
+
 export class BasePage {
-    readonly page: Page
-    constructor(page: Page) {
-		this.page = page
-	}
+    constructor(protected readonly page: Page) {}
+
+    protected async isVisibleSafe(locator: Locator, timeout = 5000): Promise<boolean> {
+        try {
+            return await locator.isVisible({ timeout })
+        } catch {
+            return false
+        }
+    }
 }
-export { expect, Page } from '@playwright/test'
+
+export { expect, Page, Locator } from '@playwright/test'

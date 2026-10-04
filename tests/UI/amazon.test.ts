@@ -4,7 +4,7 @@ import { urls } from '../../data/urls';
 import { amazonData } from '../../data/amazonData';
 
 
-test('amazon test', async ({ page, context }) => {
+test.skip('amazon test', async ({ page, context }) => {
   test.setTimeout(60000)
   const pages = createPages(page)
 

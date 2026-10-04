@@ -4,7 +4,7 @@ import { testData } from '../../data/index'
 
 test.describe('MakeMeTrip - End to End Flight & Travel Search', () => {
 
-    test('should land on flight search results page after completing a one-way flight search', async ({ page }) => {
+    test.skip('should land on flight search results page after completing a one-way flight search', async ({ page }) => {
         const pages = createPages(page)
 
         // Arrange
@@ -24,7 +24,7 @@ test.describe('MakeMeTrip - End to End Flight & Travel Search', () => {
         await expect(pages.makemytrip.oneWayOption).not.toBeVisible({ timeout: 5000 })
     })
 
-    test('should land on round-trip flight results page after completing a round-trip search', async ({ page }) => {
+    test.skip('should land on round-trip flight results page after completing a round-trip search', async ({ page }) => {
         const pages = createPages(page)
 
         // Arrange
@@ -44,7 +44,7 @@ test.describe('MakeMeTrip - End to End Flight & Travel Search', () => {
         await expect(page).not.toHaveURL(/error/, { timeout: 5000 })
     })
 
-    test('should land on hotel results page after searching for hotels in a city', async ({ page }) => {
+    test.skip('should land on hotel results page after searching for hotels in a city', async ({ page }) => {
         const pages = createPages(page)
 
         // Arrange

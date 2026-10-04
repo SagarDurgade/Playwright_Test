@@ -8,7 +8,7 @@ on:
 
   schedule:
     # Offset from :00 to avoid GitHub's top-of-the-hour scheduling congestion/drops
-    - cron: '30 21 * * *'
+    - cron: '41 23 * * *'
 
   workflow_dispatch:
     inputs:
