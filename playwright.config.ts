@@ -10,10 +10,12 @@ export default defineConfig({
   workers: process.env.CI ? 4 : 4,
   reporter: [ ['html', { open: 'never' }]],
 
-  timeout: 60000,
-  expect: {
-    timeout: 5000,
-  },
+  // Timeouts
+  // globalTimeout: 60000,
+  // timeout: 60000,
+  // expect: {
+  //   timeout: 5000,
+  // },
 
   use: {
     trace: 'on-first-retry',
