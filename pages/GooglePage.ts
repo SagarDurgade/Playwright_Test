@@ -3,13 +3,11 @@ import { BasePage, expect } from './BasePage'
 export class GooglePage extends BasePage {
     searchInput = this.page.getByRole('combobox', { name: 'Search' })
     searchButton = this.page.getByRole('button', { name: 'Google Search' })
+    doNotUseChromeButton = this.page.getByRole('button', { name: 'Do not use Chrome' })
 
     async searchText(text: string) {
-        await this.page.waitForTimeout(4000)
-        await this.searchInput.fill(text)
-        await this.page.keyboard.press('Escape')
-        await this.page.waitForTimeout(4000)
-        await this.searchButton.click()
+        await this.searchInput.pressSequentially(text, { delay: 200 })
+        await this.searchInput.press('Enter')
     }
 
     async verifySearchResult(text: string) {

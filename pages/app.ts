@@ -4,7 +4,7 @@ import { DuckduckgoPage } from './DuckduckgoPage'
 import { MakemytripPage } from './MakemytripPage'
 import { amazonPage } from './amazonPage'
 import { NaukariPage } from './NaukariPage'
-
+import { GotoPage } from './GotoPage'
 
 export const createPages = (page: Page) => {
     return {
@@ -13,5 +13,6 @@ export const createPages = (page: Page) => {
         makemytrip: new MakemytripPage(page),
         amazon: new amazonPage(page),
         naukari: new NaukariPage(page),
+        goto: new GotoPage(page),
     }
 }

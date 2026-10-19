@@ -17,7 +17,7 @@ const storageStatePath = path.resolve('storageState.json')
 
 test('Login to Naukri and reuse the saved session', { tag: '@Naukri' }, async ({ browser }) => {
   const context = await browser.newContext({ storageState: fs.existsSync(storageStatePath) ? storageStatePath : undefined })
-
+//const context = await browser.newContext({ storageState: 'path/to/your/existing/auth.json'});
   try {
     const page = await context.newPage()
     const pages = createPages(page)

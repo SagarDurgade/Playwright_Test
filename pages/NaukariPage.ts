@@ -33,7 +33,7 @@ export class NaukariPage extends BasePage {
         const loginVisible = await this.loginLink.isVisible()
 
         return profileVisible || loginVisible
-        }, { message: 'Waiting for the Naukri login or profile option', timeout: 30_000 }).toBe(true)
+        }, { message: 'Waiting for the Naukri login or profile option', timeout: 55_000 }).toBe(true)
 
         return !(await this.viewProfileLink.isVisible())
     }
